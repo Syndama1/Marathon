@@ -108,11 +108,12 @@
         background: #35363f;
         position: absolute;
         z-index: 1;
-        display: none;
+        opacity: 0;
+        transition: opacity 0.1s ease-in-out;
     }
 
     body:has(.item:hover) .tooltip {
-        display: block;
+        opacity: 1;
     }
 
     .tooltip div {
