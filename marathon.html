@@ -1,13 +1,137 @@
 <body>
     <div class="ui-sections">
+        <div class="shell-stats">
+            <div class="shell-select">
+                Assassin
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-name">Heat Capacity</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 10%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Agility</div>
+                    <div class="stat-value">20</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 20%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Loot Speed</div>
+                    <div class="stat-value">15</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 15%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Melee Damage</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 10%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Prime Recovery</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 10%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Tactical Recovery</div>
+                    <div class="stat-value">5</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 5%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Self-Repair Speed</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 10%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Finisher Siphon</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 10%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Revive Speed</div>
+                    <div class="stat-value">15</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 15%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Hardware</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 10%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Firewall</div>
+                    <div class="stat-value">20</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 20%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Fall Resistance</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 10%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="stat-name">Ping Duration</div>
+                    <div class="stat-value">10</div>
+                    <div class="stat-change"></div>
+                    <div class="stat-bar">
+                        <div class="bar-filled" style="width: 10%;"></div>
+                        <div class="bar-change"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="shell-loadout">
             <div class="equipment">
                 <div class="slot-title">EQUIPMENT</div>
                 <div class="item-slot size2x1">
-                    <div class="item size2x1 enhanced">
-                        <canvas width="8" height="4" class="item-background" id="item-background"></canvas>
-                        <div class="item-type"></div>
-                    </div>
+                    <div class="item size2x1 enhanced" id="item">
+                    <canvas width="8" height="4" class="item-background" id="item-background"></canvas>
+                    <div class="item-type"></div>
+                </div>
                 </div>
             </div>
             <div class="shield">
@@ -100,6 +224,79 @@
     body {
         background-color: #25242b;
         overflow: hidden;
+        margin: 0px;
+    }
+
+    .shell-stats {
+        grid-area: shell-stats;
+        font-family: 'KH Interference Regular';
+        font-size: 15px;
+        color: #ffffff;
+        width: 100%;
+        height: 100vh;
+        padding: 60px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shell-select {
+        height: 100%;
+    }
+
+    .stat {
+        display: grid;
+        grid-template-areas: 
+        "stat-name stat-value stat-change"
+        "stat-bar stat-bar stat-change";
+        grid-template-columns: auto 40px 0px;
+        padding: 10px 8px 6px;
+        margin-top: 2px;
+        transition: background-color 0.1s ease-in-out;
+    }
+
+    .stat:hover {
+        background-color: #404040;
+    }
+
+    .stat:hover {
+        cursor: pointer;
+    }
+
+    .stat-name {
+        grid-area: stat-name;
+    }
+
+    .stat-value {
+        grid-area: stat-value;
+        text-align: right;
+    }
+
+    .stat-change {
+        grid-area: stat-change;
+    }
+
+    .stat-bar {
+        grid-area: stat-bar;
+        background-color: #585858;
+        width: 100%;
+        height: 3px;
+        margin: 5px 0px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .stat-bar > .bar-filled {
+        height: 100%;
+        background-color: #ffffff;
+    }
+
+    .stat-bar > .bar-change {
+        height: 100%;
+    }
+
+    .bar-change.negative {
+        background-color: #980330;
     }
 
     .tooltip {
@@ -112,13 +309,12 @@
         transition: opacity 0.1s ease-in-out;
     }
 
-    body:has(.item:hover) .tooltip {
+    body:has(.item:hover, .stat:hover) .tooltip {
         opacity: 1;
     }
 
-    .tooltip div {
-        font-family: 'KH Interference Regular';
-        font-size: 15px;
+    body:has(.item:active) .tooltip {
+        opacity: 0.2;
     }
 
     .tooltip > .rarity-bar {
@@ -127,6 +323,8 @@
         display: grid;
         grid-template-areas: "type-icon type value";
         grid-template-columns: 30px auto 42px;
+        font-family: 'KH Interference Regular';
+        font-size: 15px;
     }
 
     .enhanced > .rarity-bar {
@@ -142,12 +340,19 @@
         border-left: solid #585858 1px;
     }
 
+    .rarity-bar > .value {
+        text-align: right;
+        padding-right: 10px;
+    }
+
     .item {
         position: relative;
         height: 100%;
         cursor: pointer;
         outline: solid #00000000 2px;
         transition: outline-color 0.2s ease-in-out;
+        height: 65px;
+        width: 130px;
     }
 
     .item:hover {
@@ -182,7 +387,7 @@
         grid-template-areas: 
             "shell-stats weapons inventory"
             "shell-stats shell-loadout inventory";
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 2fr;
         grid-template-rows: 1fr 1fr;
         place-items: center;
         height: 100%;
@@ -256,6 +461,7 @@
 <script>
     const itemBackground = document.getElementById("item-background");
     const ctx = itemBackground.getContext('2d');
+    const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
     const gradient = ctx.createLinearGradient(0, 0, 8, 4);
     gradient.addColorStop(0, "#20805b");
@@ -265,8 +471,8 @@
 
     const tooltipBox = document.getElementById("tooltip");
     window.onmousemove = function (e) {
-        var x = e.clientX + 40;
-        var y = e.clientY - 100;
+        var x = clamp(e.clientX + 40, 0, window.innerWidth - tooltipBox.offsetWidth);
+        var y = clamp(e.clientY - 100, 0, window.innerHeight - tooltipBox.offsetHeight);
         tooltipBox.style.top = y + 'px';
         tooltipBox.style.left = x + 'px';
     };
