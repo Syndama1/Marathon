@@ -128,34 +128,61 @@
             <div class="equipment">
                 <div class="slot-title">EQUIPMENT</div>
                 <div class="item-slot size2x1">
-                    <div class="item size2x1 enhanced" id="item">
-                    <canvas width="8" height="4" class="item-background" id="item-background"></canvas>
-                    <div class="item-type"></div>
-                </div>
+                    <div class="item size2x1" id="item" data-quality="standard" data-has-quality="true">
+                        <canvas width="8" height="4" class="item-background"></canvas>
+                        <div class="item-type">equipment</div>
+                        <div class="item-name">Protector V1</div>
+                        <div class="description">+1 Shield Slot</div>
+                        <div class="value">100</div>
+                    </div>
                 </div>
             </div>
             <div class="shield">
                 <div class="slot-title">SHIELD</div>
                 <div class="item-slot size2x1">
-
+                    <div class="item size2x1" id="item" data-quality="enhanced" data-has-quality="true">
+                        <canvas width="8" height="4" class="item-background"></canvas>
+                        <div class="item-type">shields</div>
+                        <div class="item-name">Protector V1</div>
+                        <div class="description">+1 Shield Slot</div>
+                        <div class="value">100</div>
+                    </div>
                 </div>
             </div>
             <div class="core1">
                 <div class="slot-title">CORES</div>
                 <div class="item-slot size2x1">
-
+                    <div class="item size2x1" id="item" data-quality="prestige" data-has-quality="true">
+                        <canvas width="8" height="4" class="item-background"></canvas>
+                        <div class="item-type">core</div>
+                        <div class="item-name">Protector V1</div>
+                        <div class="description">+1 Shield Slot</div>
+                        <div class="value">100</div>
+                    </div>
                 </div>
             </div>
             <div class="core2">
                 <div class="slot-title"></div>
                 <div class="item-slot size2x1">
-
+                    <div class="item size2x1" id="item" data-quality="superior" data-has-quality="true">
+                        <canvas width="8" height="4" class="item-background"></canvas>
+                        <div class="item-type">core</div>
+                        <div class="item-name">Protector V1</div>
+                        <div class="description">+1 Shield Slot</div>
+                        <div class="value">100</div>
+                    </div>
                 </div>
             </div>
             <div class="implant1">
                 <div class="slot-title">IMPLANTS</div>
                 <div class="item-slot size2x1">
-
+                    <div class="item size2x1" id="item" data-quality="deluxe" data-has-quality="true">
+                        <canvas width="8" height="4" class="item-background"></canvas>
+                        <div class="item-type">implant</div>
+                        <div class="item-name">Protector V1</div>
+                        <div class="description">+1 Shield Slot</div>
+                        <div class="value">100</div>
+                    </div>
                 </div>
             </div>
             <div class="implant2">
@@ -172,10 +199,30 @@
             </div>
             <div class="shell"></div>
         </div>
+
+        
+        <div class="inventory">
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+            <div class="item-slot size1x1"></div>
+        </div>
     </div>
 
     <div class="tooltip enhanced" id="tooltip">
-        <div class="rarity-bar">
+        <div class="rarity-bar" id="rarity-bar">
             <div class="type-icon"></div>
             <div class="type">Enhanced Equipment</div>
             <div class="value">$200</div>
@@ -225,7 +272,21 @@
         background-color: #25242b;
         overflow: hidden;
         margin: 0px;
+        user-select: none;
     }
+
+    .ui-sections {
+        display: grid;
+        grid-template-areas: 
+            "shell-stats shell-art weapons inventory"
+            "shell-stats shell-art shell-loadout inventory";
+        grid-template-columns: 1fr 0.8fr 1fr 450px 1fr;
+        grid-template-rows: 1fr 1fr;
+        place-items: center;
+        height: 100%;
+    }
+
+    /* #region Shell Stats */
 
     .shell-stats {
         grid-area: shell-stats;
@@ -299,99 +360,9 @@
         background-color: #980330;
     }
 
-    .tooltip {
-        width: 300px;
-        height: 300px;
-        background: #35363f;
-        position: absolute;
-        z-index: 1;
-        opacity: 0;
-        transition: opacity 0.1s ease-in-out;
-    }
+    /* #endregion */
 
-    body:has(.item:hover, .stat:hover) .tooltip {
-        opacity: 1;
-    }
-
-    body:has(.item:active) .tooltip {
-        opacity: 0.2;
-    }
-
-    .tooltip > .rarity-bar {
-        height: 30px;
-        width: 100%;
-        display: grid;
-        grid-template-areas: "type-icon type value";
-        grid-template-columns: 30px auto 42px;
-        font-family: 'KH Interference Regular';
-        font-size: 15px;
-    }
-
-    .enhanced > .rarity-bar {
-        background-color: #00f587;
-    }
-
-    .rarity-bar div {
-        padding-top: 9px;
-    }
-
-    .rarity-bar > .type {
-        padding-left: 10px;
-        border-left: solid #585858 1px;
-    }
-
-    .rarity-bar > .value {
-        text-align: right;
-        padding-right: 10px;
-    }
-
-    .item {
-        position: relative;
-        height: 100%;
-        cursor: pointer;
-        outline: solid #00000000 2px;
-        transition: outline-color 0.2s ease-in-out;
-        height: 65px;
-        width: 130px;
-    }
-
-    .item:hover {
-        outline: solid #00f587 2px;
-    }
-
-    .item-type {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50px;
-        height: 18px;
-        pointer-events: none;
-    }
-
-    .enhanced > .item-type {
-        background: #00f587;
-    }
-
-    .item-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        image-rendering: pixelated;
-        pointer-events: none;
-    }
-
-    .ui-sections {
-        display: grid;
-        grid-template-areas: 
-            "shell-stats weapons inventory"
-            "shell-stats shell-loadout inventory";
-        grid-template-columns: 1fr 1fr 2fr;
-        grid-template-rows: 1fr 1fr;
-        place-items: center;
-        height: 100%;
-    }
+    /* #region Shell Loadout */
 
     .shell-loadout {
         grid-area: shell-loadout;
@@ -437,15 +408,124 @@
         grid-area: shell;
     }
 
+    /* #endregion */
+
+    .inventory {
+        grid-area: inventory;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100vh;
+        padding: 60px;
+        align-content: flex-start;
+        box-sizing: border-box;
+    }
+
+    /* #region Item */
+
+    .item {
+        position: fixed;
+        cursor: pointer;
+        outline: solid #00000000 2px;
+        transition: outline-color 0.2s ease-in-out;
+        height: 65px;
+        width: 138px;
+        z-index: 10;
+        overflow: hidden;
+        align-items: center;
+    }
+
+    .item div {
+        font-size: 0px;
+    }
+
+    [data-quality=standard].item:hover, [data-quality=standard].item:active {
+        outline: solid #cbcdcf 2px;
+    }
+
+    [data-quality=enhanced].item:hover, [data-quality=enhanced].item:active {
+        outline: solid #00f587 2px;
+    }
+
+    [data-quality=deluxe].item:hover, [data-quality=deluxe].item:active {
+        outline: solid #46aeff 2px;
+    }
+
+    [data-quality=superior].item:hover, [data-quality=superior].item:active {
+        outline: solid #c22eff 2px;
+    }
+
+    [data-quality=prestige].item:hover, [data-quality=prestige].item:active {
+        outline: solid #ffea10 2px;
+    }
+
+    .item:active {
+        pointer-events: none;
+        z-index: 15;
+    }
+
+    .item-type {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 18px;
+        pointer-events: none;
+    }
+
+    [data-quality=standard] > .item-type {
+        background: #cbcdcf;
+    }
+
+    [data-quality=enhanced] > .item-type {
+        background: #00f587;
+    }
+
+    [data-quality=deluxe] > .item-type {
+        background: #46aeff;
+    }
+
+    [data-quality=superior] > .item-type {
+        background: #c22eff;
+    }
+
+    [data-quality=prestige] > .item-type {
+        background: #ffea10;
+    }
+
+    .item-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        image-rendering: pixelated;
+        pointer-events: none;
+    }
+
+    /* #endregion */
+
+    /* #region Item Slots */
+
     .item-slot {
         background-color: #35363f;
-        margin: 0px 4px;
-        /* overflow: hidden; */
+        margin: 4px 4px;
+        outline: solid #ffffff00 2px;
+        transition: outline-color 0.2s ease-in-out;
+    }
+
+    body:has(.item:active) .item-slot:not(*:has(.item)):hover {
+        outline: solid #ffffff 2px;
+    }
+
+    .item-slot.size1x1 {
+        height: 65px;
+        width: 65px;
     }
 
     .item-slot.size2x1 {
         height: 65px;
-        width: 130px;
+        width: 138px;
     }
 
     .slot-title {
@@ -457,18 +537,198 @@
         transform: translateY(2px);
     }
 
+    /* #endregion */
+
+    /* #region Tooltip */
+
+    .tooltip {
+        width: 300px;
+        height: 300px;
+        background: #35363f;
+        position: absolute;
+        z-index: 11;
+        opacity: 0;
+        transition: opacity 0.1s ease-in-out;
+        pointer-events: none;
+    }
+
+    body:has(.item:hover, .stat:hover) .tooltip {
+        opacity: 1;
+    }
+
+    body:has(.item:active) .tooltip {
+        opacity: 0;
+    }
+
+    .tooltip > .rarity-bar {
+        height: 30px;
+        width: 100%;
+        display: grid;
+        grid-template-areas: "type-icon type value";
+        grid-template-columns: 30px auto 42px;
+        font-family: 'KH Interference Regular';
+        font-size: 15px;
+        transition: opacity 0.1s ease-in-out;
+    }
+
+    [data-quality=standard] > .rarity-bar {
+        background-color: #cbcdcf;
+    }
+
+    [data-quality=enhanced] > .rarity-bar {
+        background-color: #00f587;
+    }
+
+    [data-quality=deluxe] > .rarity-bar {
+        background-color: #46aeff;
+    }
+
+    [data-quality=superior] > .rarity-bar {
+        background-color: #c22eff;
+    }
+
+    [data-quality=prestige] > .rarity-bar {
+        background-color: #ffea10;
+    }
+
+    .rarity-bar div {
+        padding-top: 9px;
+    }
+
+    .rarity-bar > .type {
+        padding-left: 10px;
+        border-left: solid #585858 1px;
+    }
+
+    .rarity-bar > .value {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    /* #endregion */
+
 </style>
 <script>
-    const itemBackground = document.getElementById("item-background");
-    const ctx = itemBackground.getContext('2d');
+    const items = [...document.getElementsByClassName("item")];
+    const qualites = Object.freeze({
+        standard: {
+            fullColor: '#cbcdcf',
+            weakColor: '#5f6067'
+        },
+        enhanced: {
+            fullColor: '#00f587',
+            weakColor: '#20805b'
+        },
+        deluxe: {
+            fullColor: '#46aeff',
+            weakColor: '#3b668d'
+        },
+        superior: {
+            fullColor: '#c22eff',
+            weakColor: '#8032a5'
+        },
+        prestige: {
+            fullColor: '#ffea10',
+            weakColor: '#877f2b'
+        }
+    });
+
+
+    items.forEach(element => {
+        element.addEventListener('mousedown', mouseDown);
+    });
+
+    function mouseDown(itemEvent) {
+        var hoveredElement;
+        const thisItem = itemEvent.srcElement;
+
+        originX = thisItem.style.top;
+        originY = thisItem.style.left;
+
+        startX = itemEvent.clientX;
+        startY = itemEvent.clientY;
+
+        document.addEventListener('mousemove', mouseMove);
+        document.addEventListener('mouseup', mouseUp);
+        document.addEventListener('mouseover', mouseOver);
+
+        function mouseMove(e) {
+            newX = startX - e.clientX;
+            newY = startY - e.clientY;
+        
+            startX = e.clientX;
+            startY = e.clientY;
+
+            thisItem.style.top = (thisItem.offsetTop - newY) + 'px';
+            thisItem.style.left = (thisItem.offsetLeft - newX) + 'px';
+        }
+
+        function mouseUp(e) {
+            document.removeEventListener('mousemove', mouseMove);
+            document.removeEventListener('mouseover', mouseOver);
+            document.removeEventListener('mouseup', mouseUp);
+
+            if(hoveredElement.classList.contains("item")) {
+                var temp = hoveredElement.parentElement;
+                thisItem.parentElement.appendChild(hoveredElement);
+                temp.appendChild(thisItem);
+
+                hoveredElement.style.top = "";
+                hoveredElement.style.left = "";
+
+                thisItem.style.top = "";
+                thisItem.style.left = "";
+                return;
+            }
+
+            if(hoveredElement.classList.contains("item-slot")) {
+                hoveredElement.appendChild(thisItem);
+                thisItem.style.top = "";
+                thisItem.style.left = "";
+            } else {
+                thisItem.style.top = originY;
+                thisItem.style.left = originX;
+            }
+        }
+
+        function mouseOver(e) {
+            hoveredElement = event.target;
+        }
+    }
+
+    const itemBackgrounds = [...document.getElementsByClassName("item-background")];
+
+    itemBackgrounds.forEach(element => {
+        const ctx = element.getContext('2d');
+        const quality = element.parentElement.getAttribute('data-quality');
+        var gradientColor;
+
+        switch (quality) {
+            case "standard":
+                gradientColor = qualites.standard.weakColor;
+                break;
+            case "enhanced":
+                gradientColor = qualites.enhanced.weakColor;
+                break;
+            case "deluxe":
+                gradientColor = qualites.deluxe.weakColor;
+                break;
+            case "superior":
+                gradientColor = qualites.superior.weakColor;
+                break;
+            case "prestige":
+                gradientColor = qualites.prestige.weakColor;
+                break;
+        }
+
+        const gradient = ctx.createLinearGradient(0, 0, 8, 4);
+        gradient.addColorStop(0, gradientColor);
+        gradient.addColorStop(0.8, "#35363f");
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 8, 4);
+    });
+
     const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-
-    const gradient = ctx.createLinearGradient(0, 0, 8, 4);
-    gradient.addColorStop(0, "#20805b");
-    gradient.addColorStop(0.8, "#35363f");
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, 8, 4);
-
     const tooltipBox = document.getElementById("tooltip");
     window.onmousemove = function (e) {
         var x = clamp(e.clientX + 40, 0, window.innerWidth - tooltipBox.offsetWidth);
@@ -477,7 +737,17 @@
         tooltipBox.style.left = x + 'px';
     };
 
-    // window.onmouseover = function (e) {
-    //     console.log(e);
-    // }
+    document.addEventListener('mouseover', updateTooltip);  
+
+    function updateTooltip(e) {
+        element = e.srcElement;
+
+        const rarityBar = tooltipBox.querySelector(".tooltip .rarity-bar");
+        rarityBar.style.opacity = "0";
+        if (element.getAttribute('data-has-quality') == "true") {
+            rarityBar.style.opacity = "1";
+            rarityBar.parentElement.setAttribute('data-quality', element.getAttribute('data-quality'));
+            rarityBar.querySelector(".type").innerHTML = element.getAttribute('data-quality') + " " + element.querySelector(".item-type").innerHTML;
+        }        
+    }
 </script>
