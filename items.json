@@ -1,0 +1,613 @@
+[
+    {
+        "section-name": "head-implants",
+        "item-size": {
+            "x": 2,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "standard",
+                "name": "Augmented Capacitors V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "prime-recovery",
+                        "value": 15
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Augmented Capacitors V2",
+                "value": 70,
+                "stat-changes": [
+                    {
+                        "name": "prime-recovery",
+                        "value": 20
+                    },
+                    {
+                        "name": "hardware",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Augmented Capacitors V3",
+                "value": 200,
+                "stat-changes": [
+                    {
+                        "name": "prime-recovery",
+                        "value": 30
+                    },
+                    {
+                        "name": "hardware",
+                        "value": -10
+                    }
+                ]
+            },
+            {
+                "quality": "superior",
+                "name": "Augmented Capacitors V4",
+                "value": 600,
+                "stat-changes": [
+                    {
+                        "name": "prime-recovery",
+                        "value": 40
+                    },
+                    {
+                        "name": "hardware",
+                        "value": -10
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "ENERGY HARVESTING V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "loot-speed",
+                        "value": -10
+                    },
+                    {
+                        "name": "tactical-recovery",
+                        "value": 5
+                    },
+                    {
+                        "name": "ping-duration",
+                        "value": -40
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "ENERGY HARVESTING V2",
+                "value": 70,
+                "stat-changes": [
+                    {
+                        "name": "tactical-recovery",
+                        "value": -5
+                    },
+                    {
+                        "name": "firewall",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "ENERGY HARVESTING V3",
+                "value": 200,
+                "stat-changes": [
+                    {
+                        "name": "tactical-recovery",
+                        "value": 15
+                    },
+                    {
+                        "name": "firewall",
+                        "value": -10
+                    }
+                ]
+            },
+            {
+                "quality": "superior",
+                "name": "Energy HARVESTING V4",
+                "value": 600,
+                "stat-changes": [
+                    {
+                        "name": "tactical-recovery",
+                        "value": 40
+                    },
+                    {
+                        "name": "firewall",
+                        "value": -5
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "Ping+ V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "hardware",
+                        "value": 5
+                    },
+                    {
+                        "name": "ping-duration",
+                        "value": 30
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Ping+ V2",
+                "value": 70,
+                "stat-changes": [
+                    {
+                        "name": "hardware",
+                        "value": 10
+                    },
+                    {
+                        "name": "ping-duration",
+                        "value": 30
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Ping+ V3",
+                "value": 200,
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": -10
+                    },
+                    {
+                        "name": "loot-speed",
+                        "value": 10
+                    },
+                    {
+                        "name": "hardware",
+                        "value": 10
+                    },
+                    {
+                        "name": "firewall",
+                        "value": -40
+                    },
+                    {
+                        "name": "fall-resistance",
+                        "value": -40
+                    },
+                    {
+                        "name": "ping-duration",
+                        "value": 40
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Ping+ V4",
+                "value": 600,
+                "stat-changes": [
+                    {
+                        "name": "loot-speed",
+                        "value": 15
+                    },
+                    {
+                        "name": "hardware",
+                        "value": 10
+                    },
+                    {
+                        "name": "ping-duration",
+                        "value": 20
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "Regen V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "self-repair-speed",
+                        "value": 15
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Regen V2",
+                "value": 70,
+                "stat-changes": [
+                    {
+                        "name": "self-repair-speed",
+                        "value": 30
+                    },
+                    {
+                        "name": "revive-speed",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Regen V3",
+                "value": 200,
+                "stat-changes": [
+                    {
+                        "name": "self-repair-speed",
+                        "value": 40
+                    },
+                    {
+                        "name": "revive-speed",
+                        "value": 15
+                    }
+                ]
+            },
+            {
+                "quality": "superior",
+                "name": "Regen v4",
+                "value": 600,
+                "stat-changes": [
+                    {
+                        "name": "self-repair-speed",
+                        "value": 50
+                    },
+                    {
+                        "name": "revive-speed",
+                        "value": 20
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "Sprint Kit V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": 3
+                    },
+                    {
+                        "name": "agility",
+                        "value": 5
+                    },
+                    {
+                        "name": "loot-speed",
+                        "value": 5
+                    },
+                    {
+                        "name": "fall-resistance",
+                        "value": 5
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Sprint Kit V2",
+                "value": 70,
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": 4
+                    },
+                    {
+                        "name": "agility",
+                        "value": 10
+                    },
+                    {
+                        "name": "loot-speed",
+                        "value": 10
+                    },
+                    {
+                        "name": "fall-resistance",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Sprint Kit V3",
+                "value": 200,
+                "description": "Unknown"
+            },
+            {
+                "quality": "superior",
+                "name": "Sprint kit v4",
+                "value": 600,
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": 15
+                    },
+                    {
+                        "name": "agility",
+                        "value": 20
+                    },
+                    {
+                        "name": "loot-speed",
+                        "value": 20
+                    },
+                    {
+                        "name": "fall-resistance",
+                        "value": 20
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section-name": "torso-implants",
+        "item-size": {
+            "x": 2,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "standard",
+                "name": "helping hands V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "revive-speed",
+                        "value": 15
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "hurting hands V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "finisher-siphon",
+                        "value": 15
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "Knife Fight V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "melee-damage",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "Nimble Fingers V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "loot-speed",
+                        "value": 15
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "Survival Kit V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "self-repair-speed",
+                        "value": 5}
+                        ,
+                    {
+                        "name": "revive-speed",
+                        "value": 5}
+                        ,
+                    {
+                        "name": "hardware",
+                        "value": 5}
+                        ,
+                    {
+                        "name": "firewall",
+                        "value": 5
+                    },
+                    {
+                        "name": "ping-duration",
+                        "value": 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section-name": "implant-traits",
+        "item-size": {
+            "x": 1,
+            "y": 1
+        },
+        "items": [ 
+            {
+                "quality": "standard",
+                "description": "<h1>Overclocked Cooling</h1>While under the benefits of a Mechanic's Kit or OS Debug, gain increased <b>Heat Capacity.</b>"
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Stolen Intel</h1>Defeating a UESC commander ping nearby hostiles."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Muscular Augments</h1>While under the effects of Cardio Kick, your sprint speed is faster."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Bedside Manner</h1>While a crew member is nearby, your <b>Self-Repair Speed</b> is increased and you use healing consumables more quickly."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Logic Bomb</h1>Precision UESC eliminations <hack> nearby hostiles."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Volt Resistance</h1>Reduces incoming UESC damage from volt weapons."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Dr. Killjoy</h1><b>Finisher Siphon</b> restores health and shields after finishing a Runner."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Carnage Cartridge</h1>Reloading after defeating a hostile overflows your magazine."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Back in Action</h1>Using a Shield Charge or Patch Kit briefly increases your weapons' read and reload speed."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Clean Slate</h1>After reviving a crew member, nearby crew members are cleansed of MCH and OS status effects."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Thermal Sinks</h1>Sliding in water generates no heat."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Ballistic Resistance</h1>Reduces incoming UESC damage from ballistic weapons."
+            }
+        ]
+    },
+    {
+        "section-name": "weapon-mods",
+        "item-size": {
+            "x": 1,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "deluxe",
+                "name": "Insurrection",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "This weapon deals considerably <b>increased damage against UESC</b> forces."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Afterburner",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Sliding with this weapon <b>reloads</b> a portion of your magazine and </b>increases stability and accuracy</b> by a moderate amount.<br><br>Ballistic weapons reload from reserves. Volt weapons reload a smaller portion."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Background Process",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "When this weapon is stowed, it <b>automatically reloads</b> after a significant period of time."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Bounty Hunter",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Eliminating UESC <b>pays you a small amount of credits</b>."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Chaos Theory",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Dealing a considerable amount of sustained damage causes hostile to <b>drop random ammo</b>."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Circuit Tracers",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Eliminations with this weapon <b>reload the magazine</b> by a moderate amount."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Endless Runner",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While under the effects of <b>Cardio Kick</b>, eliminating hostile with this weapon extends its duration by a moderate ammount."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Five Finger Discount",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Eliminating UESC or downing RUnners with a <b>melee or knife</b> attack partially <b>reloads</b> this weapon by a moderate amount."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Insomniac",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While under the effect of <b>Energy Amp</b>, eleminating hostile with this weapon extends its duration by a moderate amount."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Last Resort",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While you are <b>Overheated</b>, non-precision <b>damage is increased</b> by a moderate amount."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Opportunist",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While shields are depleted, shots on hostile targets have a moderate <b>chance to return ammo</b> to the magazine."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Optimal Prime",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Dealing damage quickly after your prime ability ends grants you the effects of <b>Energy Amp</b> for a moderate duration."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Rocket Start",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Eliminating a hostile shortly after sprinting grants you the effects of <b>Cardio Kick</b> for a moderate duration."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Slip Protocol",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While moving, this weapon's <b>stability and accuracy increase</b> by a moderate amount."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Stack Overflow",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a moderate amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Torch Bug",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Eliminating a hostile cause them to <b>explode</b>.",
+                "stat-changes": [
+                    {
+                        "name": "reload-speed",
+                        "value": "-0.2s"
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Trigger Discipline",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Grants a moderate amount of <b>increased accuracy</b> for the first few rounds of a trigger pull."
+            }
+        ]
+    }
+]
