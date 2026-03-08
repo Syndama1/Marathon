@@ -221,6 +221,9 @@
             </div>
             <div class="shell"></div>
         </div>
+        <div class="inventory-sidebar">
+
+        </div>
         <div class="inventory" id="inventory">
                      
         </div>
@@ -312,7 +315,7 @@
     /* #endregion */
 
     body {
-        background-color: #25242b;
+        background-color: #19181a;
         overflow: hidden;
         margin: 0px;
         user-select: none;
@@ -321,9 +324,9 @@
     .ui-sections {
         display: grid;
         grid-template-areas: 
-            "shell-stats shell-art weapons inventory inventory-sidebar"
-            "shell-stats shell-art shell-loadout inventory inventory-sidebar";
-        grid-template-columns: 1fr 0.6fr 0.4fr 2.4fr 0.1fr;
+            "shell-stats shell-art weapons inventory-sidebar inventory"
+            "shell-stats shell-art shell-loadout inventory-sidebar inventory";
+        grid-template-columns: 1fr 0.6fr 0.4fr 0.2fr 865px;
         grid-template-rows: 1fr 1fr;
         place-items: center;
         height: 100%;
@@ -479,6 +482,18 @@
 
     /* #endregion */
 
+    .inventory-sidebar {
+        background-color: #25242b;
+        grid-area: inventory-sidebar;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        top: 40px;
+        min-height: 40px;
+        padding-left: 40%;
+        background-clip: content-box;
+    }
+
     /* #region Inventory */
 
     .inventory {
@@ -487,7 +502,11 @@
         height: 100vh;
         padding: 60px;
         box-sizing: border-box;
-        /* overflow-y: scroll; */
+        background-color: #25242b;
+        overflow-x: clip;
+        overflow-y: scroll;
+        position: relative;
+        scrollbar-color: #ffffff #25242b;
     }
 
     .inventory-section-title {
@@ -510,13 +529,17 @@
     /* #region Item */
 
     .item {
-        position: fixed;
+        position: absolute;
         cursor: pointer;
         outline: solid #00000000 2px;
         transition: outline-color 0.2s ease-in-out;
         z-index: 10;
         overflow: hidden;
         align-items: center;
+    }
+
+    .item.ghost {
+        opacity: 0.4;
     }
 
     .item.size1x1 {
@@ -533,27 +556,27 @@
         font-size: 0px;
     }
 
-    [data-quality=standard].item:hover, [data-quality=standard].item:active {
+    [data-quality=standard].item:not(.ghost):hover, [data-quality=standard].item:not(.ghost):active {
         outline: solid #cbcdcf 2px;
     }
 
-    [data-quality=enhanced].item:hover, [data-quality=enhanced].item:active {
+    [data-quality=enhanced].item:not(.ghost):hover, [data-quality=enhanced].item:not(.ghost):active {
         outline: solid #00f587 2px;
     }
 
-    [data-quality=deluxe].item:hover, [data-quality=deluxe].item:active {
+    [data-quality=deluxe].item:not(.ghost):hover, [data-quality=deluxe].item:not(.ghost):active {
         outline: solid #46aeff 2px;
     }
 
-    [data-quality=superior].item:hover, [data-quality=superior].item:active {
+    [data-quality=superior].item:not(.ghost):hover, [data-quality=superior].item:not(.ghost):active {
         outline: solid #c22eff 2px;
     }
 
-    [data-quality=prestige].item:hover, [data-quality=prestige].item:active {
+    [data-quality=prestige].item:not(.ghost):hover, [data-quality=prestige].item:not(.ghost):active {
         outline: solid #ffea10 2px;
     }
 
-    .item:active {
+    .item:not(.ghost):active {
         pointer-events: none;
         z-index: 15;
     }
@@ -646,7 +669,7 @@
         opacity: 0;
         transition: opacity 0.1s ease-in-out;
         pointer-events: none;
-        box-shadow: 0px 0px 5px 5px #25242b;
+        box-shadow: 0px 0px 5px 5px #0a0a0a41;
         backdrop-filter: blur(20px);
     }
 
@@ -711,7 +734,7 @@
     }
 
     .tooltip > .content {
-        padding: 0px 12px;
+        padding: 0px 18px 0px 14px;
     }
 
     .tooltip > .content > div {
@@ -748,14 +771,33 @@
         padding-top: 8px;
     }
 
+    [data-quality=enhanced] .content h2 {
+        color: #00f587;
+    }
+
+    [data-quality=deluxe] .content h2 {
+        color: #46aeff;
+    }
+
+    [data-quality=superior] .content h2 {
+        color: #c22eff;
+    }
+
+    [data-quality=prestige] .content h2 {
+        color: #ffea10;
+    }
+
     .tooltip > .content h2 {
         font-size: 14px;
-        color: #ffea10;
         margin: 8px 0px 4px;
     }
 
     .tooltip > .content > .description {
         padding-top: 8px;
+    }
+
+    .tooltip > .content > .description:not(*:last-child) {
+        padding-bottom: 10px;
     }
 
     .tooltip > .content > .description > b {
@@ -909,7 +951,7 @@
                     if(item["mod-slot"] != null) {
                         itemType.innerHTML = item["mod-slot"];
                     } else {
-                        itemType.innerHTML = section["section-name"].replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+                        itemType.innerHTML = section["section-name"].replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase()).replace(/s$/, "");
                     }
                     newItem.appendChild(itemType);
 
@@ -950,36 +992,41 @@
     function mouseDown(itemEvent) {
         var hoveredElement;
         const thisItem = itemEvent.srcElement;
+        const parent = thisItem.parentElement;
+        const ghost = thisItem.cloneNode(true);
+        ghost.classList.add("ghost");
+        ghost.querySelector('.item-background').getContext('2d').drawImage(thisItem.querySelector('.item-background'), 0, 0);
+        parent.appendChild(ghost);
 
-        originX = thisItem.style.top;
-        originY = thisItem.style.left;
+        const mouseOffsetX = itemEvent.offsetX;
+        const mouseOffsetY = itemEvent.offsetY;
 
-        startX = itemEvent.clientX;
-        startY = itemEvent.clientY;
+        originY = thisItem.getBoundingClientRect().top;
+        originX = thisItem.getBoundingClientRect().left;
+
+        document.body.moveBefore(thisItem, null);
+
+        thisItem.style.left = originX;
+        thisItem.style.top = originY;
 
         document.addEventListener('mousemove', mouseMove);
         document.addEventListener('mouseup', mouseUp);
         document.addEventListener('mouseover', mouseOver);
 
         function mouseMove(e) {
-            newX = startX - e.clientX;
-            newY = startY - e.clientY;
-        
-            startX = e.clientX;
-            startY = e.clientY;
-
-            thisItem.style.top = (thisItem.offsetTop - newY) + 'px';
-            thisItem.style.left = (thisItem.offsetLeft - newX) + 'px';
+            thisItem.style.top = (e.clientY - mouseOffsetY) + 'px';
+            thisItem.style.left = (e.clientX - mouseOffsetX) + 'px';
         }
 
         function mouseUp(e) {
             document.removeEventListener('mousemove', mouseMove);
             document.removeEventListener('mouseover', mouseOver);
             document.removeEventListener('mouseup', mouseUp);
+            ghost.remove();
 
-            if(hoveredElement.classList.contains("item")) {
+            if(hoveredElement.classList.contains("item") && !hoveredElement.classList.contains("ghost")) {
                 var temp = hoveredElement.parentElement;
-                thisItem.parentElement.appendChild(hoveredElement);
+                parent.appendChild(hoveredElement);
                 temp.appendChild(thisItem);
 
                 hoveredElement.style.top = "";
@@ -995,8 +1042,9 @@
                 thisItem.style.top = "";
                 thisItem.style.left = "";
             } else {
-                thisItem.style.top = originY;
-                thisItem.style.left = originX;
+                parent.appendChild(thisItem);
+                thisItem.style.top = "";
+                thisItem.style.left = "";
             }
         }
 

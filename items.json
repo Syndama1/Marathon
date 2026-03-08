@@ -13,7 +13,7 @@
                 "stat-changes": [
                     {
                         "name": "prime-recovery",
-                        "value": 15
+                        "value": 10
                     }
                 ]
             },
@@ -28,7 +28,7 @@
                     },
                     {
                         "name": "hardware",
-                        "value": 10
+                        "value": -10
                     }
                 ]
             },
@@ -63,6 +63,21 @@
                 ]
             },
             {
+                "quality": "prestige",
+                "name": "Augmented Capacitors V5",
+                "value": 600,
+                "stat-changes": [
+                    {
+                        "name": "prime-recovery",
+                        "value": 50
+                    },
+                    {
+                        "name": "hardware",
+                        "value": -10
+                    }
+                ]
+            },
+            {
                 "quality": "standard",
                 "name": "ENERGY HARVESTING V1",
                 "value": 25,
@@ -88,11 +103,11 @@
                 "stat-changes": [
                     {
                         "name": "tactical-recovery",
-                        "value": -5
+                        "value": 20
                     },
                     {
                         "name": "firewall",
-                        "value": 10
+                        "value": -10
                     }
                 ]
             },
@@ -125,6 +140,12 @@
                         "value": -5
                     }
                 ]
+            },
+            {
+                "quality": "prestige",
+                "name": "Energy HARVESTING V5",
+                "value": 600,
+                "description": "Unknown"
             },
             {
                 "quality": "standard",
@@ -207,6 +228,12 @@
                 ]
             },
             {
+                "quality": "prestige",
+                "name": "Ping+ V5",
+                "value": 600,
+                "description": "Unknown"
+            },
+            {
                 "quality": "standard",
                 "name": "Regen V1",
                 "value": 25,
@@ -259,6 +286,21 @@
                     {
                         "name": "revive-speed",
                         "value": 20
+                    }
+                ]
+            },
+            {
+                "quality": "prestige",
+                "name": "Regen v4",
+                "value": 600,
+                "stat-changes": [
+                    {
+                        "name": "self-repair-speed",
+                        "value": 60
+                    },
+                    {
+                        "name": "revive-speed",
+                        "value": 25
                     }
                 ]
             },
@@ -336,6 +378,12 @@
                         "value": 20
                     }
                 ]
+            },
+            {
+                "quality": "prestige",
+                "name": "Sprint kit v5",
+                "value": 600,
+                "description": "Unknown"
             }
         ]
     },
@@ -365,6 +413,21 @@
                     {
                         "name": "finisher-siphon",
                         "value": 15
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "hurting hands V2",
+                "value": 70,
+                "stat-changes": [
+                    {
+                        "name": "finisher-siphon",
+                        "value": 25
+                    },
+                    {
+                        "name": "firewall",
+                        "value": 10
                     }
                 ]
             },
@@ -425,7 +488,39 @@
             "x": 1,
             "y": 1
         },
-        "items": [ 
+        "items": [
+            {
+                "quality": "standard",
+                "description": "<h1>Back in Action</h1>Using a Shield Charge or Patch Kit briefly increases your weapons' read and reload speed."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Ballistic Resistance</h1>Reduces incoming UESC damage from ballistic weapons."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Bedside Manner</h1>While a crew member is nearby, your <b>Self-Repair Speed</b> is increased and you use healing consumables more quickly."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Carnage Cartridge</h1>Reloading after defeating a hostile overflows your magazine."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Clean Slate</h1>After reviving a crew member, nearby crew members are cleansed of MCH and OS status effects."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Dr. Killjoy</h1><b>Finisher Siphon</b> restores health and shields after finishing a Runner."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Logic Bomb</h1>Precision UESC eliminations <hack> nearby hostiles."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Muscular Augments</h1>While under the effects of Cardio Kick, your sprint speed is faster."
+            },
             {
                 "quality": "standard",
                 "description": "<h1>Overclocked Cooling</h1>While under the benefits of a Mechanic's Kit or OS Debug, gain increased <b>Heat Capacity.</b>"
@@ -436,35 +531,7 @@
             },
             {
                 "quality": "standard",
-                "description": "<h1>Muscular Augments</h1>While under the effects of Cardio Kick, your sprint speed is faster."
-            },
-            {
-                "quality": "standard",
-                "description": "<h1>Bedside Manner</h1>While a crew member is nearby, your <b>Self-Repair Speed</b> is increased and you use healing consumables more quickly."
-            },
-            {
-                "quality": "standard",
-                "description": "<h1>Logic Bomb</h1>Precision UESC eliminations <hack> nearby hostiles."
-            },
-            {
-                "quality": "standard",
-                "description": "<h1>Volt Resistance</h1>Reduces incoming UESC damage from volt weapons."
-            },
-            {
-                "quality": "standard",
-                "description": "<h1>Dr. Killjoy</h1><b>Finisher Siphon</b> restores health and shields after finishing a Runner."
-            },
-            {
-                "quality": "standard",
-                "description": "<h1>Carnage Cartridge</h1>Reloading after defeating a hostile overflows your magazine."
-            },
-            {
-                "quality": "standard",
-                "description": "<h1>Back in Action</h1>Using a Shield Charge or Patch Kit briefly increases your weapons' read and reload speed."
-            },
-            {
-                "quality": "standard",
-                "description": "<h1>Clean Slate</h1>After reviving a crew member, nearby crew members are cleansed of MCH and OS status effects."
+                "description": "<h1>Sympathetic Reflex</h1>Defeating a hostile grants increased ADS speed and weapon handling to you and nearby crew members."
             },
             {
                 "quality": "standard",
@@ -472,30 +539,41 @@
             },
             {
                 "quality": "standard",
-                "description": "<h1>Ballistic Resistance</h1>Reduces incoming UESC damage from ballistic weapons."
+                "description": "<h1>Volt Resistance</h1>Reduces incoming UESC damage from volt weapons."
+            },
+            {
+                "quality": "standard",
+                "description": "<h1>Walk It Off</h1>While you are affected by any negative status effect, defeating a hostile cleanses the effect."
             }
         ]
     },
     {
-        "section-name": "weapon-mods",
+        "section-name": "weapon-chip-mods",
         "item-size": {
             "x": 1,
             "y": 1
         },
         "items": [
             {
-                "quality": "deluxe",
-                "name": "Insurrection",
-                "value": "207",
-                "mod-slot": "chip mod",
-                "description": "This weapon deals considerably <b>increased damage against UESC</b> forces."
-            },
-            {
                 "quality": "enhanced",
                 "name": "Afterburner",
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "Sliding with this weapon <b>reloads</b> a portion of your magazine and </b>increases stability and accuracy</b> by a moderate amount.<br><br>Ballistic weapons reload from reserves. Volt weapons reload a smaller portion."
+            },
+            {
+                "quality": "standard",
+                "name": "Alternating Current",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Restore a small amount of <b>health or shields</b> when damaging a target affected by <emp>."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Alternating Current",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Restore a moderate amount of <b>health or shields</b> when damaging a target affected by <emp>."
             },
             {
                 "quality": "enhanced",
@@ -505,11 +583,39 @@
                 "description": "When this weapon is stowed, it <b>automatically reloads</b> after a significant period of time."
             },
             {
+                "quality": "deluxe",
+                "name": "Bits Per Second",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "Rapid precision hits temporarily <b>increase stability and reload speed</b> by a significant amount."
+            },
+            {
+                "quality": "superior",
+                "name": "Bits Per Second",
+                "value": "621",
+                "mod-slot": "chip mod",
+                "description": "Rapid precision hits temporarily <b>increase stability and reload speed</b> by a massive amount."
+            },
+            {
+                "quality": "standard",
+                "name": "Bounty Hunter",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Eliminating UESC <b>pays you a few credits</b>."
+            },
+            {
                 "quality": "enhanced",
                 "name": "Bounty Hunter",
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "Eliminating UESC <b>pays you a small amount of credits</b>."
+            },
+            {
+                "quality": "standard",
+                "name": "Chaos Theory",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Dealing a significant amount of sustained damage causes hostile to <b>drop random ammo</b>."
             },
             {
                 "quality": "enhanced",
@@ -519,11 +625,32 @@
                 "description": "Dealing a considerable amount of sustained damage causes hostile to <b>drop random ammo</b>."
             },
             {
+                "quality": "deluxe",
+                "name": "Chaos Theory",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "Dealing a moderate amount of sustained damage causes hostile to <b>drop random ammo</b>."
+            },
+            {
                 "quality": "enhanced",
                 "name": "Circuit Tracers",
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "Eliminations with this weapon <b>reload the magazine</b> by a moderate amount."
+            },
+            {
+                "quality": "deluxe",
+                "name": "Circuit Tracers",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Eliminations with this weapon <b>reload the magazine</b> by a significant amount."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Cloudborn",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While in a smoke, reloading this weapon <b>overflows the magazine</b> by a moderate amount."
             },
             {
                 "quality": "enhanced",
@@ -534,17 +661,93 @@
             },
             {
                 "quality": "enhanced",
+                "name": "Eyes on Fire",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Quickly after deactivation of a tactical or trait ability, eliminating a hostile grants a moderate amount of <b>tactical and trait ability energy</b>."
+            },
+            {
+                "quality": "enhanced",
                 "name": "Five Finger Discount",
                 "value": "69",
                 "mod-slot": "chip mod",
-                "description": "Eliminating UESC or downing RUnners with a <b>melee or knife</b> attack partially <b>reloads</b> this weapon by a moderate amount."
+                "description": "Eliminating UESC or downing Runners with a <b>melee or knife</b> attack partially <b>reloads</b> this weapon by a moderate amount."
+            },
+            {
+                "quality": "standard",
+                "name": "Insomniac",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "While under the effect of <b>Energy Amp</b>, eleminating hostiles with this weapon extends its duration by a small amount."
             },
             {
                 "quality": "enhanced",
                 "name": "Insomniac",
                 "value": "69",
                 "mod-slot": "chip mod",
-                "description": "While under the effect of <b>Energy Amp</b>, eleminating hostile with this weapon extends its duration by a moderate amount."
+                "description": "While under the effect of <b>Energy Amp</b>, eleminating hostiles with this weapon extends its duration by a moderate amount."
+            },
+            {
+                "quality": "deluxe",
+                "name": "Insomniac",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "While under the effect of <b>Energy Amp</b>, eleminating hostiles with this weapon extends its duration by a significant amount."
+            },
+            {
+                "quality": "standard",
+                "name": "Insurance Plan",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "While under the effects of a <b>Mechanic's Kit</b> or <b>OS Debug</b>, defeating a hostile extends its duration by a small amount."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Insurance Plan",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While under the effects of a <b>Mechanic's Kit</b> or <b>OS Debug</b>, defeating a hostile moderately extends its duration."
+            },
+            {
+                "quality": "standard",
+                "name": "Insurrection",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "This weapon deals slightly <b>increased damage against UESC</b> forces."
+            },
+            {
+                "quality": "deluxe",
+                "name": "Insurrection",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "This weapon deals considerably <b>increased damage against UESC</b> forces."
+            },
+            {
+                "quality": "superior",
+                "name": "Insurrection",
+                "value": "621",
+                "mod-slot": "chip mod",
+                "description": "This weapon deals significantly <b>increased damage against UESC</b> forces."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Keyboard Warrior",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Eliminations grant <b>stacks of bonus accuracy and range</b> for a moderate duration.",
+                "stat-changes": [
+                    {
+                        "name": "reload-speed",
+                        "value": "-10s"
+                    }
+                ]
+            },
+            {
+                "quality": "standard",
+                "name": "Last Resort",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "While you are <b>Overheated</b>, non-precision <b>damage is increased</b> by a small amount."
             },
             {
                 "quality": "enhanced",
@@ -555,10 +758,38 @@
             },
             {
                 "quality": "enhanced",
+                "name": "Mini Jammer",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While aiming down signts for a moderate duration, you gain the <b>Signal Jammer</b> effect."
+            },
+            {
+                "quality": "deluxe",
+                "name": "Mini Jammer",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "While aiming down signts for a brief duration, you gain the <b>Signal Jammer</b> effect."
+            },
+            {
+                "quality": "enhanced",
                 "name": "Opportunist",
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "While shields are depleted, shots on hostile targets have a moderate <b>chance to return ammo</b> to the magazine."
+            },
+            {
+                "quality": "superior",
+                "name": "Opportunist",
+                "value": "621",
+                "mod-slot": "chip mod",
+                "description": "While shields are depleted, shots on hostile targets have a significant <b>chance to return ammo</b> to the magazine."
+            },
+            {
+                "quality": "standard",
+                "name": "Optimal Prime",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Dealing damage quickly after your prime ability ends grants you the effects of <b>Energy Amp</b> for a short duration."
             },
             {
                 "quality": "enhanced",
@@ -568,11 +799,59 @@
                 "description": "Dealing damage quickly after your prime ability ends grants you the effects of <b>Energy Amp</b> for a moderate duration."
             },
             {
+                "quality": "deluxe",
+                "name": "Optimal Prime",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "Dealing damage quickly after your prime ability ends grants you the effects of <b>Energy Amp</b> for a considerable duration."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Ornithologist",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "After aiming down sights for a brief duration, projectile impacts create a <b>distracting bird call</b>.",
+                "stat-changes": [
+                    {
+                        "name": "ads-speed",
+                        "value": "-10s"
+                    }
+                ]
+            },
+            {
+                "quality": "superior",
+                "name": "Reckless Behaviour",
+                "value": "621",
+                "mod-slot": "chip mod",
+                "description": "<b>Damage is increased</b> while your shields are depleted."
+            },
+            {
+                "quality": "standard",
+                "name": "Rocket Start",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Eliminating a hostile shortly after sprinting grants you the effects of <b>Cardio Kick</b> for a short duration."
+            },
+            {
                 "quality": "enhanced",
                 "name": "Rocket Start",
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "Eliminating a hostile shortly after sprinting grants you the effects of <b>Cardio Kick</b> for a moderate duration."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Rorschach Test",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "While surrounded by hostiles, <b>reloading overflows the magazine</b> by a moderate amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
+            },
+            {
+                "quality": "superior",
+                "name": "See Ya",
+                "value": "621",
+                "mod-slot": "chip mod",
+                "description": "Reloading this weapon when the magazine is empty causes you to become <b>briefly invisible</b>."
             },
             {
                 "quality": "enhanced",
@@ -589,6 +868,55 @@
                 "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a moderate amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
             },
             {
+                "quality": "deluxe",
+                "name": "Stack Overflow",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a significant amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
+            },
+            {
+                "quality": "superior",
+                "name": "Stack Overflow",
+                "value": "621",
+                "mod-slot": "chip mod",
+                "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a massive amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
+            },
+            {
+                "quality": "standard",
+                "name": "Sucker Punch",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Slightly increases the <b>damage of your next melee attack</b> after dealing damage with this weapon."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Sucker Punch",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Moderately increases the <b>damage of your next melee attack</b> after dealing damage with this weapon."
+            },
+            {
+                "quality": "standard",
+                "name": "Swarm Directive",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "<b>Precision eliminations</b> with this weapon spawn a <b>flechette seeker that heals you</b> when damaging hostiles."
+            },
+            {
+                "quality": "deluxe",
+                "name": "Swarm Directive",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "Precision eliminations with this weapon spawn a moderate amount of <b>flechette seekers that heal you when damaging hostiles</b>."
+            },
+            {
+                "quality": "superior",
+                "name": "Swarm Directive",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "Precision eliminations with this weapon spawn a large amount of <b>flechette seekers that heal you when damaging hostiles</b>."
+            },
+            {
                 "quality": "enhanced",
                 "name": "Torch Bug",
                 "value": "69",
@@ -597,7 +925,33 @@
                 "stat-changes": [
                     {
                         "name": "reload-speed",
-                        "value": "-0.2s"
+                        "value": "-10s"
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Torch Bug",
+                "value": "207",
+                "mod-slot": "chip mod",
+                "description": "Eliminating a hostile cause them to <b>explode</b>.",
+                "stat-changes": [
+                    {
+                        "name": "reload-speed",
+                        "value": "-20s"
+                    }
+                ]
+            },
+            {
+                "quality": "superior",
+                "name": "Torch Bug",
+                "value": "621",
+                "mod-slot": "chip mod",
+                "description": "Eliminating a hostile cause them to <b>explode</b>.",
+                "stat-changes": [
+                    {
+                        "name": "reload-speed",
+                        "value": "-30s"
                     }
                 ]
             },
@@ -607,6 +961,71 @@
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "Grants a moderate amount of <b>increased accuracy</b> for the first few rounds of a trigger pull."
+            }
+        ]
+    },
+    {
+        "section-name": "precision-and-sniper-weapon-mods",
+        "item-size": {
+            "x": 1,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "enhanced",
+                "name": "Rangerfinder Optic",
+                "value": "69",
+                "mod-slot": "precision optic mod",
+                "description": "Slightly increases zoom, ADS accuracy, and accuracy while moving.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
+                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Hi-Zoom Optic",
+                "value": "69",
+                "mod-slot": "precision optic mod",
+                "description": "Slightly increases zoom, range, and ADS accuracy.",
+                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Cold Vigilance Scope",
+                "value": "69",
+                "mod-slot": "precision optic mod",
+                "description": "Slightly increases zoom, ADS speed, and ADS accuracy.",
+                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Impulse Break",
+                "value": "60",
+                "mod-slot": "precision barrel mod",
+                "description": "Slightly increases ADS accuracy.",
+                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr", "longshot", "outland"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Tru-Shot Barrel",
+                "value": "60",
+                "mod-slot": "precision barrel mod",
+                "description": "Slightly increases aim assist.",
+                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr", "longshot", "outland"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Steady Barrel",
+                "value": "60",
+                "mod-slot": "precision barrel mod",
+                "description": "Slightly increases stability.",
+                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr", "longshot", "outland"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Farshot Barrel",
+                "value": "60",
+                "mod-slot": "precision barrel mod",
+                "description": "Slightly increases ADS accuracy and range.",
+                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr", "longshot", "outland"]
             }
         ]
     }
