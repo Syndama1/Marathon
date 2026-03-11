@@ -1,22 +1,218 @@
 [
     {
+        "section-name": "shield-implants",
+        "item-size": {
+            "x": 2,
+            "y": 1
+        },
+        "items":
+        [
+            {
+                "quality": "enhanced",
+                "name": "Protector V1",
+                "value": 150,
+                "description": "<plus>1 Shield Slot",
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": -5
+                    },
+                    {
+                        "name": "agility",
+                        "value": -5
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Reinforced Shields V1",
+                "value": 180,
+                "description": "<b>Reinforces</b> your base shields.<br><br><b>Reinforced</b> shields take half damage.",
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": -5
+                    },
+                    {
+                        "name": "agility",
+                        "value": -5
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Protector V2",
+                "value": 400,
+                "description": "<plus>2 Shield Slots",
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": -10
+                    },
+                    {
+                        "name": "agility",
+                        "value": -10
+                    }
+                ]
+            },
+            {
+                "quality": "superior",
+                "name": "Protector V3",
+                "value": 900,
+                "description": "<plus>3 Shield Slots",
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": -15
+                    },
+                    {
+                        "name": "agility",
+                        "value": -15
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "section-name": "cores",
+        "item-size": {
+            "x": 2,
+            "y": 1
+        },
+        "items":
+        [
+            {
+                "quality": "standard",
+                "name": "Close and Personal",
+                "value": 35,
+                "description": "Your melee and knife attacks generate <b>less heat</b>."
+            },
+            {
+                "quality": "standard",
+                "name": "Communal Cleanse",
+                "value": 35,
+                "description": "Removing a <b>negative status effect</b> with a consumable also removes it from <b>nearby crew members</b>."
+            },
+            {
+                "quality": "standard",
+                "name": "Like for Like",
+                "value": 35,
+                "description": "Defeating hostile with <b>ballistic weapons</b> reduces the duration of your active <b>MCH status effects</b>.<br><br>Defeating hostiles with <b>volt weapons</b> reduces the duration of your active <b>OS status effects</b>."
+            },
+            {
+                "quality": "enhanced",
+                "name": "Breathing Space",
+                "value": 70,
+                "description": "Your Shroud increases your weapons' <b>reload speed</b> while in any <b>smoke field</b>.",
+                "required-shell": "assassin"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Bombardier",
+                "value": 70,
+                "description": "Defeating hostiles while your Search and Destroy is active <b>extends its duration</b>.",
+                "required-shell": "destroyer"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Bombing Run",
+                "value": 70,
+                "description": "Each successive homing missle in your Search and Destroy volly deals <b>increased damage</b>.",
+                "required-shell": "destroyer"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Heavy Ordinance",
+                "value": 70,
+                "description": "Defeating hostiles with explosive damage <b>reduces the cooldown</b> of your next Search and Destroy.",
+                "required-shell": "destroyer"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Bad Cop",
+                "value": 70,
+                "description": "Performing a finisher grants <b>tactical</b> and <b>prime ability energy</b>.",
+                "required-shell": "recon"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Eye in the Sky",
+                "value": 70,
+                "description": "UESC <b>Target Acquisition Devices</b> that you access remain active for longer and release <b>additional ping pulses</b>.",
+                "required-shell": "recon"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Boutique",
+                "value": 70,
+                "description": "The Finer Things also grants <b>weapon reload speed</b> and <b>Agility</b> based on the number of items in your Backpack.",
+                "required-shell": "thief"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Crime Spree",
+                "value": 70,
+                "description": "Each container you open increases your <b>Loot Speed</b>. This increase resets when you're downed.",
+                "required-shell": "thief"
+            },
+            {
+                "quality": "deluxe",
+                "name": "Keen Eye",
+                "value": 200,
+                "description": "<b><hack>ing</b> a hostile with your X-Ray Visor <b>extends its duration</b>.",
+                "required-shell": "thief"
+            },
+            {
+                "quality": "enhanced",
+                "name": "High Voltage",
+                "value": 70,
+                "description": "Defeating hostile affected by <EMP> reduces the cooldown of your next <b>Battery Overcharge</b>.",
+                "required-shell": "triage"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Ounce of Prevention",
+                "value": 70,
+                "description": "Your <b>Med-Drone</b> increases <b>Hardware</b> and <b>Firewall</b> of crew members while attached.",
+                "required-shell": "triage"
+            },
+            {
+                "quality": "deluxe",
+                "name": "Electron Recapture Sinks",
+                "value": 200,
+                "description": "While your <b>Battery Overcharge</b> is active, defeating a hostile or downing a Runner with a volt weapons instantly <b>restores a portion of the weapon's charge</b>.",
+                "required-shell": "triage"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Low Profile",
+                "value": 70,
+                "description": "You gain the effects of <b>Signal Jammer</b> while <b>Power Sliding</b>.",
+                "required-shell": "vandal"
+            },
+            {
+                "quality": "enhanced",
+                "name": "Out of Dodge",
+                "value": 70,
+                "description": "When your shields break, your <b>generated heat</b> is immediately cleared</b>.",
+                "required-shell": "vandal"
+            },
+            {
+                "quality": "deluxe",
+                "name": "Cut to the Chase",
+                "value": 200,
+                "description": "<b>Disrupt Cannon</b> takes less time to <b>overcharge</b>.",
+                "required-shell": "vandal"
+            }
+        ]
+    },
+    {
         "section-name": "head-implants",
         "item-size": {
             "x": 2,
             "y": 1
         },
         "items": [
-            {
-                "quality": "standard",
-                "name": "Augmented Capacitors V1",
-                "value": 25,
-                "stat-changes": [
-                    {
-                        "name": "prime-recovery",
-                        "value": 10
-                    }
-                ]
-            },
             {
                 "quality": "enhanced",
                 "name": "Augmented Capacitors V2",
@@ -33,72 +229,19 @@
                 ]
             },
             {
-                "quality": "deluxe",
-                "name": "Augmented Capacitors V3",
-                "value": 200,
-                "stat-changes": [
-                    {
-                        "name": "prime-recovery",
-                        "value": 30
-                    },
-                    {
-                        "name": "hardware",
-                        "value": -10
-                    }
-                ]
-            },
-            {
-                "quality": "superior",
-                "name": "Augmented Capacitors V4",
-                "value": 600,
-                "stat-changes": [
-                    {
-                        "name": "prime-recovery",
-                        "value": 40
-                    },
-                    {
-                        "name": "hardware",
-                        "value": -10
-                    }
-                ]
-            },
-            {
-                "quality": "prestige",
-                "name": "Augmented Capacitors V5",
-                "value": 600,
-                "stat-changes": [
-                    {
-                        "name": "prime-recovery",
-                        "value": 50
-                    },
-                    {
-                        "name": "hardware",
-                        "value": -10
-                    }
-                ]
-            },
-            {
                 "quality": "standard",
-                "name": "ENERGY HARVESTING V1",
+                "name": "Energy Harvesting V1",
                 "value": 25,
                 "stat-changes": [
                     {
-                        "name": "loot-speed",
-                        "value": -10
-                    },
-                    {
                         "name": "tactical-recovery",
-                        "value": 5
-                    },
-                    {
-                        "name": "ping-duration",
-                        "value": -40
+                        "value": 1
                     }
                 ]
             },
             {
                 "quality": "enhanced",
-                "name": "ENERGY HARVESTING V2",
+                "name": "Energy Harvesting V2",
                 "value": 70,
                 "stat-changes": [
                     {
@@ -108,139 +251,6 @@
                     {
                         "name": "firewall",
                         "value": -10
-                    }
-                ]
-            },
-            {
-                "quality": "deluxe",
-                "name": "ENERGY HARVESTING V3",
-                "value": 200,
-                "stat-changes": [
-                    {
-                        "name": "tactical-recovery",
-                        "value": 15
-                    },
-                    {
-                        "name": "firewall",
-                        "value": -10
-                    }
-                ]
-            },
-            {
-                "quality": "superior",
-                "name": "Energy HARVESTING V4",
-                "value": 600,
-                "stat-changes": [
-                    {
-                        "name": "tactical-recovery",
-                        "value": 40
-                    },
-                    {
-                        "name": "firewall",
-                        "value": -5
-                    }
-                ]
-            },
-            {
-                "quality": "prestige",
-                "name": "Energy HARVESTING V5",
-                "value": 600,
-                "description": "Unknown"
-            },
-            {
-                "quality": "standard",
-                "name": "Ping+ V1",
-                "value": 25,
-                "stat-changes": [
-                    {
-                        "name": "hardware",
-                        "value": 5
-                    },
-                    {
-                        "name": "ping-duration",
-                        "value": 30
-                    }
-                ]
-            },
-            {
-                "quality": "enhanced",
-                "name": "Ping+ V2",
-                "value": 70,
-                "stat-changes": [
-                    {
-                        "name": "hardware",
-                        "value": 10
-                    },
-                    {
-                        "name": "ping-duration",
-                        "value": 30
-                    }
-                ]
-            },
-            {
-                "quality": "deluxe",
-                "name": "Ping+ V3",
-                "value": 200,
-                "stat-changes": [
-                    {
-                        "name": "heat-capacity",
-                        "value": -10
-                    },
-                    {
-                        "name": "loot-speed",
-                        "value": 10
-                    },
-                    {
-                        "name": "hardware",
-                        "value": 10
-                    },
-                    {
-                        "name": "firewall",
-                        "value": -40
-                    },
-                    {
-                        "name": "fall-resistance",
-                        "value": -40
-                    },
-                    {
-                        "name": "ping-duration",
-                        "value": 40
-                    }
-                ]
-            },
-            {
-                "quality": "deluxe",
-                "name": "Ping+ V4",
-                "value": 600,
-                "stat-changes": [
-                    {
-                        "name": "loot-speed",
-                        "value": 15
-                    },
-                    {
-                        "name": "hardware",
-                        "value": 10
-                    },
-                    {
-                        "name": "ping-duration",
-                        "value": 20
-                    }
-                ]
-            },
-            {
-                "quality": "prestige",
-                "name": "Ping+ V5",
-                "value": 600,
-                "description": "Unknown"
-            },
-            {
-                "quality": "standard",
-                "name": "Regen V1",
-                "value": 25,
-                "stat-changes": [
-                    {
-                        "name": "self-repair-speed",
-                        "value": 15
                     }
                 ]
             },
@@ -251,79 +261,11 @@
                 "stat-changes": [
                     {
                         "name": "self-repair-speed",
-                        "value": 30
+                        "value": 25
                     },
                     {
                         "name": "revive-speed",
                         "value": 10
-                    }
-                ]
-            },
-            {
-                "quality": "deluxe",
-                "name": "Regen V3",
-                "value": 200,
-                "stat-changes": [
-                    {
-                        "name": "self-repair-speed",
-                        "value": 40
-                    },
-                    {
-                        "name": "revive-speed",
-                        "value": 15
-                    }
-                ]
-            },
-            {
-                "quality": "superior",
-                "name": "Regen v4",
-                "value": 600,
-                "stat-changes": [
-                    {
-                        "name": "self-repair-speed",
-                        "value": 50
-                    },
-                    {
-                        "name": "revive-speed",
-                        "value": 20
-                    }
-                ]
-            },
-            {
-                "quality": "prestige",
-                "name": "Regen v4",
-                "value": 600,
-                "stat-changes": [
-                    {
-                        "name": "self-repair-speed",
-                        "value": 60
-                    },
-                    {
-                        "name": "revive-speed",
-                        "value": 25
-                    }
-                ]
-            },
-            {
-                "quality": "standard",
-                "name": "Sprint Kit V1",
-                "value": 25,
-                "stat-changes": [
-                    {
-                        "name": "heat-capacity",
-                        "value": 3
-                    },
-                    {
-                        "name": "agility",
-                        "value": 5
-                    },
-                    {
-                        "name": "loot-speed",
-                        "value": 5
-                    },
-                    {
-                        "name": "fall-resistance",
-                        "value": 5
                     }
                 ]
             },
@@ -353,8 +295,25 @@
             {
                 "quality": "deluxe",
                 "name": "Sprint Kit V3",
-                "value": 200,
-                "description": "Unknown"
+                "value": 70,
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": 10
+                    },
+                    {
+                        "name": "agility",
+                        "value": 15
+                    },
+                    {
+                        "name": "loot-speed",
+                        "value": 15
+                    },
+                    {
+                        "name": "fall-resistance",
+                        "value": 15
+                    }
+                ]
             },
             {
                 "quality": "superior",
@@ -378,13 +337,7 @@
                         "value": 20
                     }
                 ]
-            },
-            {
-                "quality": "prestige",
-                "name": "Sprint kit v5",
-                "value": 600,
-                "description": "Unknown"
-            }
+            }   
         ]
     },
     {
@@ -394,28 +347,6 @@
             "y": 1
         },
         "items": [
-            {
-                "quality": "standard",
-                "name": "helping hands V1",
-                "value": 25,
-                "stat-changes": [
-                    {
-                        "name": "revive-speed",
-                        "value": 15
-                    }
-                ]
-            },
-            {
-                "quality": "standard",
-                "name": "hurting hands V1",
-                "value": 25,
-                "stat-changes": [
-                    {
-                        "name": "finisher-siphon",
-                        "value": 15
-                    }
-                ]
-            },
             {
                 "quality": "enhanced",
                 "name": "hurting hands V2",
@@ -437,46 +368,124 @@
                 "value": 25,
                 "stat-changes": [
                     {
+                        "name": "agility",
+                        "value": -10
+                    },
+                    {
+                        "name": "loot-speed",
+                        "value": -35
+                    },
+                    {
+                        "name": "agility",
+                        "value": 10
+                    }
+                ]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Knife Fight V2",
+                "value": 25,
+                "stat-changes": [
+                    {
                         "name": "melee-damage",
                         "value": 10
                     }
                 ]
             },
             {
-                "quality": "standard",
-                "name": "Nimble Fingers V1",
-                "value": 25,
+                "quality": "enhanced",
+                "name": "Survival Kit V2",
+                "value": 70,
                 "stat-changes": [
                     {
-                        "name": "loot-speed",
-                        "value": 15
+                        "name": "self-repair-speed",
+                        "value": 10
+                    },
+                    {
+                        "name": "revive-speed",
+                        "value": 10
+                    },
+                    {
+                        "name": "hardware",
+                        "value": 10
+                    },
+                    {
+                        "name": "firewall",
+                        "value": 10
+                    },
+                    {
+                        "name": "ping-duration",
+                        "value": 10
+                    }
+                ]
+            }
+        ]
+    },
+    
+    {
+        "section-name": "leg-implants",
+        "item-size": {
+            "x": 2,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "enhanced",
+                "name": "Distance Runner V2",
+                "value": 70,
+                "stat-changes": [
+                    {
+                        "name": "heat-capacity",
+                        "value": 10
                     }
                 ]
             },
             {
-                "quality": "standard",
-                "name": "Survival Kit V1",
-                "value": 25,
+                "quality": "enhanced",
+                "name": "Distance Runner V3",
+                "value": 70,
                 "stat-changes": [
                     {
-                        "name": "self-repair-speed",
-                        "value": 5}
-                        ,
+                        "name": "heat-capacity",
+                        "value": 25
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Graceful Landings V3",
+                "value": 200,
+                "stat-changes": [
                     {
-                        "name": "revive-speed",
-                        "value": 5}
-                        ,
-                    {
-                        "name": "hardware",
-                        "value": 5}
-                        ,
-                    {
-                        "name": "firewall",
-                        "value": 5
+                        "name": "agility",
+                        "value": 15
                     },
                     {
-                        "name": "ping-duration",
-                        "value": 5
+                        "name": "fall-resistance",
+                        "value": 35
+                    }
+                ]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Strike Kit V3",
+                "value": 200,
+                "stat-changes": [
+                    {
+                        "name": "melee-damage",
+                        "value": 15
+                    },
+                    {
+                        "name": "prime-recovery",
+                        "value": 15
+                    },
+                    {
+                        "name": "tactical-recovery",
+                        "value": 15
+                    },
+                    {
+                        "name": "finisher-siphon",
+                        "value": 15
                     }
                 ]
             }
@@ -491,59 +500,107 @@
         "items": [
             {
                 "quality": "standard",
+                "description": "<h1>Savior Complex</h1>When you are the only remaining crew member alive, your <b>Revive Speed</b> is increased."
+            },
+            {
+                "quality": "enhanced",
                 "description": "<h1>Back in Action</h1>Using a Shield Charge or Patch Kit briefly increases your weapons' read and reload speed."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Ballistic Resistance</h1>Reduces incoming UESC damage from ballistic weapons."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Bedside Manner</h1>While a crew member is nearby, your <b>Self-Repair Speed</b> is increased and you use healing consumables more quickly."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Carnage Cartridge</h1>Reloading after defeating a hostile overflows your magazine."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Clean Slate</h1>After reviving a crew member, nearby crew members are cleansed of MCH and OS status effects."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Dr. Killjoy</h1><b>Finisher Siphon</b> restores health and shields after finishing a Runner."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
+                "description": "<h1>Escape Vector</h1>After reviving a crew member, you and nearby allies sprint faster and generate less heat for a short time."
+            },
+            {
+                "quality": "enhanced",
+                "description": "<h1>Haptic Feedback</h1>While you have a lingering effect from a consumable, gain increased <b>Loot Speed</b>."
+            },
+            {
+                "quality": "enhanced",
+                "description": "<h1>Last Train Out</h1>While final exfil is active, all your stats are increased."
+            },
+            {
+                "quality": "enhanced",
                 "description": "<h1>Logic Bomb</h1>Precision UESC eliminations <hack> nearby hostiles."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Muscular Augments</h1>While under the effects of Cardio Kick, your sprint speed is faster."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Overclocked Cooling</h1>While under the benefits of a Mechanic's Kit or OS Debug, gain increased <b>Heat Capacity.</b>"
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
+                "description": "<h1>Recycler</h1>Your finishers heal neaby allies a small amount.</b>"
+            },
+            {
+                "quality": "enhanced",
+                "description": "<h1>Spectre Protocol</h1>After a precision elimination, you become invisible."
+            },
+            {
+                "quality": "enhanced",
                 "description": "<h1>Stolen Intel</h1>Defeating a UESC commander ping nearby hostiles."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Sympathetic Reflex</h1>Defeating a hostile grants increased ADS speed and weapon handling to you and nearby crew members."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Thermal Sinks</h1>Sliding in water generates no heat."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
+                "description": "<h1>Tox Injectors</h1>Your knife heavy attacks briefly apply <toxin> to the target."
+            },
+            {
+                "quality": "enhanced",
                 "description": "<h1>Volt Resistance</h1>Reduces incoming UESC damage from volt weapons."
             },
             {
-                "quality": "standard",
+                "quality": "enhanced",
                 "description": "<h1>Walk It Off</h1>While you are affected by any negative status effect, defeating a hostile cleanses the effect."
+            },
+            {
+                "quality": "deluxe",
+                "description": "<h1>Autonomous Emergency Kit</h1>While your shields are depleted, defeating a hostile restores a portion of your shields."
+            },
+            {
+                "quality": "deluxe",
+                "description": "<h1>No Stone Unturned</h1>Opening an unlooted container loads a random amount of ammo into the magazines of your equipped weapons."
+            },
+            {
+                "quality": "deluxe",
+                "description": "<h1>Rat Pack</h1>While surrounded by hostiles, your sneak speed is increased."
+            },
+            {
+                "quality": "deluxe",
+                "description": "<h1>Stealth Servos</h1>After sprinting for a short time, sliding makes you invisible."
+            },
+            {
+                "quality": "superior",
+                "description": "<h1>Pinata</h1>Defeating UESC with explosives has a chance to generate credits.</b>"
             }
         ]
     },
@@ -560,6 +617,13 @@
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "Sliding with this weapon <b>reloads</b> a portion of your magazine and </b>increases stability and accuracy</b> by a moderate amount.<br><br>Ballistic weapons reload from reserves. Volt weapons reload a smaller portion."
+            },
+            {
+                "quality": "deluxe",
+                "name": "Afterburner",
+                "value": "69",
+                "mod-slot": "chip mod",
+                "description": "Sliding with this weapon <b>reloads</b> a portion of your magazine and </b>increases stability and accuracy</b> by a significant amount.<br><br>Ballistic weapons reload from reserves. Volt weapons reload a smaller portion."
             },
             {
                 "quality": "standard",
@@ -581,6 +645,20 @@
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "When this weapon is stowed, it <b>automatically reloads</b> after a significant period of time."
+            },
+            {
+                "quality": "standard",
+                "name": "Battle Runner",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Eliminations with this weapon grant <b>increased sprint speed</b> for a short duration."
+            },
+            {
+                "quality": "standard",
+                "name": "Bits Per Second",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Rapid precision hits temporarily <b>increase stability and reload speed</b> by a small amount."
             },
             {
                 "quality": "deluxe",
@@ -747,14 +825,14 @@
                 "name": "Last Resort",
                 "value": "23",
                 "mod-slot": "chip mod",
-                "description": "While you are <b>Overheated</b>, non-precision <b>damage is increased</b> by a small amount."
+                "description": "While you are <b><overheat>ed</b>, non-precision <b>damage is increased</b> by a small amount."
             },
             {
                 "quality": "enhanced",
                 "name": "Last Resort",
                 "value": "69",
                 "mod-slot": "chip mod",
-                "description": "While you are <b>Overheated</b>, non-precision <b>damage is increased</b> by a moderate amount."
+                "description": "While you are <b><overheat>ed</b>, non-precision <b>damage is increased</b> by a moderate amount."
             },
             {
                 "quality": "enhanced",
@@ -813,7 +891,7 @@
                 "description": "After aiming down sights for a brief duration, projectile impacts create a <b>distracting bird call</b>.",
                 "stat-changes": [
                     {
-                        "name": "ads-speed",
+                        "name": "ADS-speed",
                         "value": "-10s"
                     }
                 ]
@@ -859,6 +937,13 @@
                 "value": "69",
                 "mod-slot": "chip mod",
                 "description": "While moving, this weapon's <b>stability and accuracy increase</b> by a moderate amount."
+            },
+            {
+                "quality": "standard",
+                "name": "Stack Overflow",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a small amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
             },
             {
                 "quality": "enhanced",
@@ -907,14 +992,21 @@
                 "name": "Swarm Directive",
                 "value": "207",
                 "mod-slot": "chip mod",
-                "description": "Precision eliminations with this weapon spawn a moderate amount of <b>flechette seekers that heal you when damaging hostiles</b>."
+                "description": "Precision eliminations with this weapon spawn a moderate amount of <b>flechette seekers that heal you</b> when damaging hostiles."
             },
             {
                 "quality": "superior",
                 "name": "Swarm Directive",
                 "value": "207",
                 "mod-slot": "chip mod",
-                "description": "Precision eliminations with this weapon spawn a large amount of <b>flechette seekers that heal you when damaging hostiles</b>."
+                "description": "Precision eliminations with this weapon spawn a large amount of <b>flechette seekers that heal you</b> when damaging hostiles."
+            },
+            {
+                "quality": "standard",
+                "name": "Torch Bug",
+                "value": "23",
+                "mod-slot": "chip mod",
+                "description": "Eliminating a hostile cause them to <b>explode</b>."
             },
             {
                 "quality": "enhanced",
@@ -965,7 +1057,7 @@
         ]
     },
     {
-        "section-name": "precision-and-sniper-weapon-mods",
+        "section-name": "barrel-mods",
         "item-size": {
             "x": 1,
             "y": 1
@@ -973,27 +1065,115 @@
         "items": [
             {
                 "quality": "enhanced",
-                "name": "Rangerfinder Optic",
-                "value": "69",
-                "mod-slot": "precision optic mod",
-                "description": "Slightly increases zoom, ADS accuracy, and accuracy while moving.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
-                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr"]
+                "name": "Precision Barrel",
+                "value": "60",
+                "mod-slot": "CQC barrel mod",
+                "description": "Slightly increases ADS accuracy and range.",
+                "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Precision Barrel",
+                "value": "180",
+                "mod-slot": "CQC barrel mod",
+                "description": "Increases ADS accuracy and range.",
+                "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
             },
             {
                 "quality": "enhanced",
-                "name": "Hi-Zoom Optic",
-                "value": "69",
-                "mod-slot": "precision optic mod",
-                "description": "Slightly increases zoom, range, and ADS accuracy.",
-                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr"]
+                "name": "Weighted Barrel",
+                "value": "60",
+                "mod-slot": "CQC barrel mod",
+                "description": "Slightly increases aim assist.",
+                "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
             },
             {
                 "quality": "enhanced",
-                "name": "Cold Vigilance Scope",
+                "name": "Nano-Suppressor",
                 "value": "69",
-                "mod-slot": "precision optic mod",
-                "description": "Slightly increases zoom, ADS speed, and ADS accuracy.",
-                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr"]
+                "mod-slot": "CQC barrel mod",
+                "description": "Slightly increases accuracy when firing from the hip.<h2>Suppressor</h2>Shots fired from this weapon are <b>silenced</b>.",
+                "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Nano-Suppressor",
+                "value": "207",
+                "mod-slot": "CQC barrel mod",
+                "description": "Increases accuracy when firing from the hip.<h2>Suppressor</h2>Shots fired from this weapon are <b>silenced</b>.",
+                "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Accu-Point Barrel",
+                "value": "180",
+                "mod-slot": "ion dampener mod",
+                "description": "Increase ADS accuracy and aim assist.",
+                "compatible-weapons": ["V66 Lookout", "V99 Channel Rifle"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Stabilizing Barrel",
+                "value": "60",
+                "mod-slot": "ion dampener mod",
+                "description": "Slightly increases stability.",
+                "compatible-weapons": ["V66 Lookout", "V99 Channel Rifle"]
+            },
+            {
+                "quality": "superior",
+                "name": "Rocksteady Barrel",
+                "value": "540",
+                "mod-slot": "ion dampener mod",
+                "description": "Greatly increases accuracy while crouched, ADS accuracy, and range.",
+                "compatible-weapons": ["V66 Lookout", "V99 Channel Rifle"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Hi-Focus Dampener",
+                "value": "60",
+                "mod-slot": "volt dampener mod",
+                "description": "Slightly increases stability and movement speed with this weapon.",
+                "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Hipshot Dampener",
+                "value": "60",
+                "mod-slot": "volt dampener mod",
+                "description": "Slightly increases accuracy when firing from the hip and movement speed with this weapon.",
+                "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Suppression Dampener",
+                "value": "69",
+                "mod-slot": "volt dampener mod",
+                "description": "Slightly increases ADS accuracy.<h2>Suppressor</h2>Shots fired from this weapon are <b>silenced</b>.",
+                "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Suppression Dampener",
+                "value": "207",
+                "mod-slot": "volt dampener mod",
+                "description": "Increases ADS accuracy.<h2>Suppressor</h2>Shots fired from this weapon are <b>silenced</b>.",
+                "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Accu-Point Dampener",
+                "value": "60",
+                "mod-slot": "volt dampener mod",
+                "description": "Slightly increases range.",
+                "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Ironhold Choke",
+                "value": "60",
+                "mod-slot": "underbarrel mod",
+                "description": "Slightly increases aim assist.",
+                "compatible-weapons": ["WSTR Combat Shotgun", "Misriah 2442"]
             },
             {
                 "quality": "enhanced",
@@ -1001,7 +1181,7 @@
                 "value": "60",
                 "mod-slot": "precision barrel mod",
                 "description": "Slightly increases ADS accuracy.",
-                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr", "longshot", "outland"]
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
             },
             {
                 "quality": "enhanced",
@@ -1009,7 +1189,7 @@
                 "value": "60",
                 "mod-slot": "precision barrel mod",
                 "description": "Slightly increases aim assist.",
-                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr", "longshot", "outland"]
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
             },
             {
                 "quality": "enhanced",
@@ -1017,7 +1197,7 @@
                 "value": "60",
                 "mod-slot": "precision barrel mod",
                 "description": "Slightly increases stability.",
-                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr", "longshot", "outland"]
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
             },
             {
                 "quality": "enhanced",
@@ -1025,7 +1205,428 @@
                 "value": "60",
                 "mod-slot": "precision barrel mod",
                 "description": "Slightly increases ADS accuracy and range.",
-                "compatible-weapons": ["strider-m1t", "hardline-pr", "repeater-hpr", "v66-lookout", "br33-volley-rifle", "twin-tap-hbr", "longshot", "outland"]
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Farshot Barrel",
+                "value": "180",
+                "mod-slot": "precision barrel mod",
+                "description": "Increases ADS accuracy and range.",
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
+            }
+        ]
+    },
+    {
+        "section-name": "grip-mods",
+        "item-size": {
+            "x": 1,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "enhanced",
+                "name": "Combat Grip",
+                "value": "60",
+                "mod-slot": "rifle grip mod",
+                "description": "Slightly increases ADS speed and ready speed.",
+                "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Vigilant Grip",
+                "value": "180",
+                "mod-slot": "rifle grip mod",
+                "description": "Increase ready speed and stability.",
+                "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Hipshot Grip",
+                "value": "60",
+                "mod-slot": "shotgun grip mod",
+                "description": "Slightly increases accuracy when firing from the hip.",
+                "compatible-weapons": ["WSTR Combat Shotgun", "Misriah 2442", "V85 Circuit Breaker"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Snapshot Grip",
+                "value": "180",
+                "mod-slot": "shotgun grip mod",
+                "description": "Increases accuracy while moving and ADS speed.",
+                "compatible-weapons": ["WSTR Combat Shotgun", "Misriah 2442", "V85 Circuit Breaker"]
+            }
+        ]
+    },
+    {
+        "section-name": "magazine-mods",
+        "item-size": {
+            "x": 1,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "enhanced",
+                "name": "Hollow-Case Rounds",
+                "value": "69",
+                "mod-slot": "assault magazine mod",
+                "description": "Slightly increases magazine size, reload speed, and range.",
+                "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR", "Copperhead RF", "Bully SMG"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Reloader Mag",
+                "value": "207",
+                "mod-slot": "assault magazine mod",
+                "description": "Increases reload speed and magazine size.",
+                "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR", "Copperhead RF", "Bully SMG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Steady Rounds",
+                "value": "69",
+                "mod-slot": "assault magazine mod",
+                "description": "Slightly increases stability and magazine size.",
+                "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR", "Copperhead RF", "Bully SMG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Cloudfeather Belt",
+                "value": "69",
+                "mod-slot": "belt-fed magazine mod",
+                "description": "Slightly increases reload speed and magazine size.",
+                "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Cloudfeather Belt",
+                "value": "207",
+                "mod-slot": "belt-fed magazine mod",
+                "description": "Increases reload speed and magazine size.",
+                "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Turbo Belt",
+                "value": "69",
+                "mod-slot": "belt-fed magazine mod",
+                "description": "Slightly incrases magazine size, reload speed, and movement speed with this weapon.",
+                "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "BFM",
+                "value": "153",
+                "mod-slot": "pistol magazine mod",
+                "description": "Greatly increases magazine size.",
+                "compatible-weapons": ["CE Tactical Sidearm"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Hi-Speed Belt",
+                "value": "126",
+                "mod-slot": "pistol magazine mod",
+                "description": "Increases reload speed and magazine size.",
+                "compatible-weapons": ["CE Tactical Sidearm"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Combat Mag",
+                "value": "207",
+                "mod-slot": "precision magazine mod",
+                "description": "Slightly increases magazine size, reload speed, and range.",
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Combat Mag",
+                "value": "207",
+                "mod-slot": "precision magazine mod",
+                "description": "Increases magazine size, reload speed, and range.",
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Hi-Cap Mag",
+                "value": "234",
+                "mod-slot": "precision magazine mod",
+                "description": "Greatly increases magazine size.",
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Turbo Chamber",
+                "value": "69",
+                "mod-slot": "volt array mod",
+                "description": "Slightly increases reload speed and magazine size.",
+                "compatible-weapons": ["V22 Volt Thrower", "V11 Punch", "V75 SCAR", "V66 Lookout"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Turbo Chamber",
+                "value": "207",
+                "mod-slot": "volt array mod",
+                "description": "Increases reload speed and magazine size.",
+                "compatible-weapons": ["V22 Volt Thrower", "V11 Punch", "V75 SCAR", "V66 Lookout"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Hi-Cap Chamber",
+                "value": "78",
+                "mod-slot": "volt array mod",
+                "description": "Increases magazine size.",
+                "compatible-weapons": ["V22 Volt Thrower", "V11 Punch", "V75 SCAR", "V66 Lookout"]
+            },
+            {
+                "quality": "superior",
+                "name": "Air-Cooled Chamber",
+                "value": 621,
+                "mod-slot": "volt cell mod",
+                "description": "Greatly increases reload speed and magazine size.",
+                "compatible-weapons": ["V99 Channel Rifle", "V00 ZEUS RG", "V85 Circuit Breaker"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Hi-Cap Heat Sink",
+                "value": "78",
+                "mod-slot": "volt cell mod",
+                "description": "Increases magazine size.",
+                "compatible-weapons": ["V99 Channel Rifle", "V00 ZEUS RG", "V85 Circuit Breaker"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Tapered Heat Sink",
+                "value": "207",
+                "mod-slot": "volt cell mod",
+                "description": "Increases reload speed and magazine size.",
+                "compatible-weapons": ["V99 Channel Rifle", "V00 ZEUS RG", "V85 Circuit Breaker"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Turbo Drive",
+                "value": "69",
+                "mod-slot": "magazine mod",
+                "description": "Slightly increases reload speed and magazine size.",
+                "compatible-weapons": ["ARES RG"]
+            },
+            {
+                "quality": "superior",
+                "name": "Hi-Velocity Payload",
+                "value": "621",
+                "mod-slot": "magazine mod",
+                "description": "Greatly increases magazine size and reload speed.",
+                "compatible-weapons": ["ARES RG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Compartmental Mag I",
+                "value": "60",
+                "mod-slot": "magazine mod",
+                "description": "Slightly increases magazine size and range.",
+                "compatible-weapons": ["Misriah 2442"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Compartmental Mag II",
+                "value": "180",
+                "mod-slot": "magazine mod",
+                "description": "Increases magazine size and range.",
+                "compatible-weapons": ["Misriah 2442"]
+            }
+        ]
+    },
+    {
+        "section-name": "optic-mods",
+        "item-size": {
+            "x": 1,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "enhanced",
+                "name": "Midsight Optic",
+                "value": "69",
+                "mod-slot": "assault optic mod",
+                "description": "Slightly increases zoom, accuracy while moving, and ADS accuracy.",
+                "compatible-weapons": ["Overrun AR", "Impact H-AR", "V75 SCAR", "BRRT SMG", "Copperhead RF", "Bully SMG"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Midsight Optic",
+                "value": "207",
+                "mod-slot": "assault optic mod",
+                "description": "Increases zoom, accuracy while moving, and ADS accuracy.",
+                "compatible-weapons": ["Overrun AR", "Impact H-AR", "V75 SCAR", "BRRT SMG", "Copperhead RF", "Bully SMG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Far Reach Optic",
+                "value": "69",
+                "mod-slot": "assault optic mod",
+                "description": "Slightly incrases zoom and range.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
+                "compatible-weapons": ["Overrun AR", "Impact H-AR", "V75 SCAR", "BRRT SMG", "Copperhead RF", "Bully SMG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Twinscope Optic",
+                "value": "69",
+                "mod-slot": "assault optic mod",
+                "description": "Slightly incrases zoom, ADS speed, and ADS accuracy.<h2>Toggle Zoom</h2>Alt Press: <b>Toggle zoom</b> level while aimed down sights.",
+                "compatible-weapons": ["Overrun AR", "Impact H-AR", "V75 SCAR", "BRRT SMG", "Copperhead RF", "Bully SMG"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Clear-Eyed Lens",
+                "value": "207",
+                "mod-slot": "LMG optic mod",
+                "description": "Increases zoom, ADS speed, and ADS accuracy.",
+                "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Vigilant Lens",
+                "value": "51",
+                "mod-slot": "pistol optic mod",
+                "description": "Slightly increases zoom, ADS speed, and ADS accuracy.",
+                "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Vigilant Lens",
+                "value": "153",
+                "mod-slot": "pistol optic mod",
+                "description": "Increases zoom, ADS speed, and ADS accuracy.",
+                "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Oracle Lens",
+                "value": "51",
+                "mod-slot": "pistol optic mod",
+                "description": "Increases ADS speed, accuracy while moving, and ADS accuracy.",
+                "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Oracle Lens",
+                "value": "153",
+                "mod-slot": "pistol optic mod",
+                "description": "Increases ADS speed, accuracy while moving, and ADS accuracy.",
+                "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Rangefinder Lens",
+                "value": "51",
+                "mod-slot": "pistol optic mod",
+                "description": "Slightly increases zoom and ADS accuracy.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
+                "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Rangefinder Lens",
+                "value": "153",
+                "mod-slot": "pistol optic mod",
+                "description": "Increases zoom and ADS accuracy.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
+                "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Rangerfinder Optic",
+                "value": "69",
+                "mod-slot": "precision optic mod",
+                "description": "Slightly increases zoom, ADS accuracy, and accuracy while moving.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Rangerfinder Optic",
+                "value": "207",
+                "mod-slot": "precision optic mod",
+                "description": "Increases zoom, ADS accuracy, and accuracy while moving.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Hi-Zoom Optic",
+                "value": "69",
+                "mod-slot": "precision optic mod",
+                "description": "Slightly increases zoom, range, and ADS accuracy.",
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Cold Vigilance Scope",
+                "value": "69",
+                "mod-slot": "precision optic mod",
+                "description": "Slightly increases zoom, ADS speed, and ADS accuracy.",
+                "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Accu-Sight Scope",
+                "value": "69",
+                "mod-slot": "sniper optic mod",
+                "description": "Increases zoom and slightly increases ADS speed and ADS accuracy.",
+                "compatible-weapons": ["Longshot", "Outland", "V99 Channel Rifle"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "Neuro-Optic Lens",
+                "value": "207",
+                "mod-slot": "sniper optic mod",
+                "description": "Slightly increased zoom and increases ADS speed.<h2>Toggle Zoom</h2>Alt Press: <b>Toggle zoom</b> level while aimed down sights.",
+                "compatible-weapons": ["Longshot", "Outland", "V99 Channel Rifle"]
+            }
+        ]
+    },
+    {
+        "section-name": "generator-mods",
+        "item-size": {
+            "x": 1,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "enhanced",
+                "name": "Turbo Generator",
+                "value": "69",
+                "mod-slot": "generator mod",
+                "description": "Slightly increases ADS speed and charge time.",
+                "compatible-weapons": ["V00 ZEUS RG", "ARES RG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Stabilizing Generator",
+                "value": "69",
+                "mod-slot": "generator mod",
+                "description": "Slightly increases stability.",
+                "compatible-weapons": ["V00 ZEUS RG", "ARES RG"]
+            }
+        ]
+    },
+    {
+        "section-name": "shield-mods",
+        "item-size": {
+            "x": 1,
+            "y": 1
+        },
+        "items": [
+            {
+                "quality": "enhanced",
+                "name": "Balanced Shield",
+                "value": "69",
+                "mod-slot": "shield mod",
+                "description": "Slightly increases ready speed and movement speed with this weapon.<h2>Assault Shield</h2>Z Press: Activate an <b>energy shield</b> that absorbs incoming damage.",
+                "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
+            },
+            {
+                "quality": "enhanced",
+                "name": "Control Shield",
+                "value": "69",
+                "mod-slot": "shield mod",
+                "description": "Slightly increases stability.<h2>Assault Shield</h2>Z Press: Activate an <b>energy shield</b> that absorbs incoming damage.",
+                "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
             }
         ]
     }
