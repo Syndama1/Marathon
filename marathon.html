@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <body>
     <div class="panels">
         <div class="panel-navigation">
@@ -239,13 +240,13 @@
                 </div>
                 <div class="core1">
                     <div class="slot-title">CORES</div>
-                    <div class="item-slot size2x1">
+                    <div class="item-slot size2x1 core">
                         
                     </div>
                 </div>
                 <div class="core2">
                     <div class="slot-title"></div>
-                    <div class="item-slot size2x1">
+                    <div class="item-slot size2x1 core">
                         
                     </div>
                 </div>
@@ -387,7 +388,7 @@
 
     .page-button {
         font-family: 'Shapiro 55 Middle Wide';
-        font-size: 12px;
+        font-size: 14px;
         padding: 10px;
         margin: 8px;
         border-radius: 5px;
@@ -398,7 +399,7 @@
     }
 
     input:checked + .page-button {
-        background-color: #a9e404;
+        background-color: #b7e92f;
         color: #082100;
     }
 
@@ -766,8 +767,14 @@
         align-items: center;
     }
 
+    body:has(.item:active) .item.master:not(*:active) {
+        cursor: default;
+        outline: solid #00000000 2px;
+    }
+
     .item.ghost {
         opacity: 0.4;
+        cursor: default;
     }
 
     .item.size1x1 {
@@ -866,7 +873,11 @@
         background-color: #35363f;
         margin: 4px 4px;
         outline: solid #ffffff00 2px;
-        transition: outline-color 0.2s ease-in-out;
+        transition: outline-color 0.2s ease-in-out, background-color 0.5s ease-in;
+    }
+
+    .item-slot.valid-slot {
+        background-color: #b7e92f;
     }
 
     body:has(.item:active) .item-slot:not(*:has(.item)):hover {
@@ -1045,6 +1056,34 @@
         padding-top: 8px;
     }
 
+    .tooltip > .actions > .mouse-action {
+        background-color: #1d1e22;
+        height: 45px;
+        padding: 12px 20px 2px;
+        box-sizing: border-box;
+        font-family: "PP Fraktion Mono Regular";
+        letter-spacing: -1px;
+        font-size: 14px;
+        color: #fff;
+        display: flex;
+    }
+
+    .keystroke {
+        content: "F";
+        font-size: 10px;
+        height: 14px;
+        min-width: 14px;
+        padding: 0px 2px;
+        outline: solid 2px #fff;
+        background-color: #585858;
+        box-sizing: border-box;
+        margin: auto 10px auto 0px;
+        text-align: center;
+        transform: translateY(-4px);
+        padding-right: 1px;
+        border-radius: 2px;
+    }
+
     .description plus::before {
         content: "+";
         color: #2be453;
@@ -1199,6 +1238,7 @@
     });
 
     const icons = Object.freeze({
+        "cores": "<img src='assets/cores.png'>",
         "implant-traits": "<img src='assets/implant_empty.png'>",
         "head-implants": "<img src='assets/implant_head.png'>",
         "torso-implants": "<img src='assets/implant_torso.png'>",
@@ -1212,6 +1252,12 @@
     });
 
     const inventory = document.getElementById("inventory");
+
+    document.querySelectorAll('.item-slot').forEach((slot) => {
+        slot.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    })
 
     fetch("items.json")
         .then((res) => res.text())
@@ -1228,8 +1274,14 @@
 
                 section.items.forEach((item) => {
                     var newItemSlot = Object.assign(document.createElement('div'), { classList: "item-slot size" + section["item-size"].x + "x" + section["item-size"].y });
+                    newItemSlot.addEventListener('contextmenu', function(e) {
+                        e.preventDefault();
+                    });
 
-                    var newItem = Object.assign(document.createElement('div'), { classList: "item size" + section["item-size"].x + "x" + section["item-size"].y });
+                    var newItem = Object.assign(document.createElement('div'), { classList: "item master size" + section["item-size"].x + "x" + section["item-size"].y });
+                    newItem.addEventListener('contextmenu', function(e) {
+                        e.preventDefault();
+                    });
                     newItem.setAttribute('data-quality', item.quality);
                     newItem.setAttribute('data-item-size', section["item-size"].x + ", " + section["item-size"].y);
                     var newItemBackground = Object.assign(document.createElement('canvas'), { classList: "item-background" });
@@ -1301,7 +1353,7 @@
                         newItem.appendChild(compatibleWeapons);
                     }
 
-                    newItem.addEventListener('mousedown', mouseDown);
+                    newItem.addEventListener('mousedown', draggableItem);
 
                     newItemSlot.appendChild(newItem);
 
@@ -1322,29 +1374,62 @@
         })
         .catch((e) => console.error(e));
 
-    function mouseDown(itemEvent) {
+    function draggableItem(itemEvent) {
         var hoveredElement;
         const thisItem = itemEvent.srcElement;
         const parent = thisItem.parentElement;
         const ghost = thisItem.cloneNode(true);
-        ghost.classList.add("ghost");
-        ghost.querySelector('.item-background').getContext('2d').drawImage(thisItem.querySelector('.item-background'), 0, 0);
-        parent.appendChild(ghost);
 
         const mouseOffsetX = itemEvent.offsetX;
         const mouseOffsetY = itemEvent.offsetY;
 
-        originY = thisItem.getBoundingClientRect().top;
-        originX = thisItem.getBoundingClientRect().left;
+        var isLongPress = false; 
 
-        document.body.moveBefore(thisItem, null);
+        document.addEventListener('mouseup', mouseShortPress);
 
-        thisItem.style.left = originX;
-        thisItem.style.top = originY;
+        let pressTimer = setTimeout(() => {
+            
+            document.removeEventListener('mouseup', mouseShortPress);
+            ghost.classList.add("ghost");
+            ghost.querySelector('.item-background').getContext('2d').drawImage(thisItem.querySelector('.item-background'), 0, 0);
+            parent.appendChild(ghost);
 
-        document.addEventListener('mousemove', mouseMove);
-        document.addEventListener('mouseup', mouseUp);
-        document.addEventListener('mouseover', mouseOver);
+            originY = thisItem.getBoundingClientRect().top;
+            originX = thisItem.getBoundingClientRect().left;
+
+            document.body.moveBefore(thisItem, null);
+
+            thisItem.style.left = originX;
+            thisItem.style.top = originY;
+
+            isLongPress = true;
+        
+            document.addEventListener('mousemove', mouseMove);
+            document.addEventListener('mouseup', mouseUp);
+            document.addEventListener('mouseover', mouseOver);
+
+        }, 150);
+
+        function mouseShortPress() {
+            document.removeEventListener('mouseup', mouseShortPress);
+            if(isLongPress) {
+                console.log("long press");
+                return;
+            }
+            
+            clearTimeout(pressTimer);
+            console.log("short press");
+            if(itemEvent.button == 2) {
+                if(!thisItem.classList.contains('master')) {
+                    console.log("deleted");
+                    thisItem.remove();
+                }
+            }
+            if(itemEvent.button == 0) {
+                console.log('mouse 1');
+            }
+            
+        }
 
         function mouseMove(e) {
             thisItem.style.top = (e.clientY - mouseOffsetY) + 'px';
@@ -1355,7 +1440,22 @@
             document.removeEventListener('mousemove', mouseMove);
             document.removeEventListener('mouseover', mouseOver);
             document.removeEventListener('mouseup', mouseUp);
-            ghost.remove();
+            
+            if(hoveredElement == null) {
+                parent.appendChild(thisItem);
+                thisItem.style.top = "";
+                thisItem.style.left = "";
+                ghost.remove();
+                return;
+            }
+
+            if(hoveredElement.classList.contains("master")) {
+                parent.appendChild(thisItem);
+                thisItem.style.top = "";
+                thisItem.style.left = "";
+                ghost.remove();
+                return;
+            }
 
             if(hoveredElement.classList.contains("item") && !hoveredElement.classList.contains("ghost")) {
                 var temp = hoveredElement.parentElement;
@@ -1367,6 +1467,14 @@
 
                 thisItem.style.top = "";
                 thisItem.style.left = "";
+                if(thisItem.classList.contains("master")) {
+                    hoveredElement.remove();
+                    ghost.classList.remove("ghost");
+                    ghost.addEventListener('mousedown', draggableItem);
+                    thisItem.classList.remove("master");
+                    return;
+                }
+                ghost.remove();
                 return;
             }
 
@@ -1374,10 +1482,24 @@
                 hoveredElement.appendChild(thisItem);
                 thisItem.style.top = "";
                 thisItem.style.left = "";
+
+                if(thisItem.classList.contains("master")) {
+                    ghost.classList.remove("ghost");
+                    ghost.addEventListener('mousedown', draggableItem);
+                    ghost.addEventListener('contextmenu', function(e) {
+                        e.preventDefault();
+                    });
+                    thisItem.classList.remove("master");
+                } else {
+                    ghost.remove();
+                }
+
+                return;
             } else {
                 parent.appendChild(thisItem);
                 thisItem.style.top = "";
                 thisItem.style.left = "";
+                ghost.remove();
             }
         }
 
@@ -1397,6 +1519,9 @@
 
     function updateTooltip(e) {
         element = e.srcElement;
+        document.querySelectorAll('.valid-slot').forEach((slot) => {
+            slot.classList.remove("valid-slot");
+        });
 
         if (!element.classList.contains("item") && !element.classList.contains("stat") && !element.classList.contains("tree-node")) {
             return;
@@ -1448,6 +1573,13 @@
             });
 
             tooltipContent.appendChild(tooltipStatChanges);
+        }
+
+        const tooltipActions = tooltipBox.querySelector('.actions');
+        tooltipActions.innerHTML = "";
+        tooltipActions.appendChild(Object.assign(document.createElement('div'), { classList: "mouse-action", innerHTML: "<div class='keystroke'>Mouse1</div> Drag: Move" }));
+        if(!element.classList.contains('master')) {
+            tooltipActions.appendChild(Object.assign(document.createElement('div'), { classList: "mouse-action", innerHTML: "<div class='keystroke'>Mouse2</div> Remove" }));
         }
 
         const rarityBar = tooltipBox.querySelector(".tooltip .rarity-bar");

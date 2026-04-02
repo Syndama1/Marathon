@@ -255,6 +255,17 @@
                 ]
             },
             {
+                "quality": "standard",
+                "name": "Regen V1",
+                "value": 25,
+                "stat-changes": [
+                    {
+                        "name": "self-repair-speed",
+                        "value": 15
+                    }
+                ]
+            },
+            {
                 "quality": "enhanced",
                 "name": "Regen V2",
                 "value": 70,
@@ -368,25 +379,6 @@
                 "value": 25,
                 "stat-changes": [
                     {
-                        "name": "agility",
-                        "value": -10
-                    },
-                    {
-                        "name": "loot-speed",
-                        "value": -35
-                    },
-                    {
-                        "name": "agility",
-                        "value": 10
-                    }
-                ]
-            },
-            {
-                "quality": "enhanced",
-                "name": "Knife Fight V2",
-                "value": 25,
-                "stat-changes": [
-                    {
                         "name": "melee-damage",
                         "value": 10
                     }
@@ -441,7 +433,7 @@
                 ]
             },
             {
-                "quality": "enhanced",
+                "quality": "deluxe",
                 "name": "Distance Runner V3",
                 "value": 70,
                 "stat-changes": [
@@ -545,6 +537,10 @@
             {
                 "quality": "enhanced",
                 "description": "<h1>Muscular Augments</h1>While under the effects of Cardio Kick, your sprint speed is faster."
+            },
+            {
+                "quality": "enhanced",
+                "description": "<h1>Ordinance Report</h1>Taking damage from a hostile's thrown or placed equipment automatically pings them."
             },
             {
                 "quality": "enhanced",
@@ -1576,6 +1572,14 @@
                 "value": "207",
                 "mod-slot": "sniper optic mod",
                 "description": "Slightly increased zoom and increases ADS speed.<h2>Toggle Zoom</h2>Alt Press: <b>Toggle zoom</b> level while aimed down sights.",
+                "compatible-weapons": ["Longshot", "Outland", "V99 Channel Rifle"]
+            },
+            {
+                "quality": "deluxe",
+                "name": "SP Scope II",
+                "value": "234",
+                "mod-slot": "sniper optic mod",
+                "description": "Increases zoom and ADS accuracy.<h2>Thermal Sight</h2>This sight <b>highlights</b> hostile heat signatures.",
                 "compatible-weapons": ["Longshot", "Outland", "V99 Channel Rifle"]
             }
         ]
