@@ -787,8 +787,17 @@
         width: 138px;
     }
 
+    .item.size2x2 {   
+        height: 138px;
+        width: 138px;
+    }
+
     .item div {
         font-size: 0px;
+    }
+
+    .item canvas {
+        pointer-events: none;
     }
 
     [data-quality=standard].item:not(.ghost):hover, [data-quality=standard].item:not(.ghost):active {
@@ -863,6 +872,7 @@
         height: auto;
         image-rendering: pixelated;
         pointer-events: none;
+        z-index: -10;
     }
 
     /* #endregion */
@@ -891,6 +901,11 @@
 
     .item-slot.size2x1 {
         height: 65px;
+        width: 138px;
+    }
+
+    .item-slot.size2x2 {
+        height: 138px;
         width: 138px;
     }
 
@@ -1618,5 +1633,74 @@
     }
 
     // #endregion
+
+</script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@latest/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+    const toRadians = (deg) => deg * (Math.PI / 180);
+
+    //#region THREEjs Background
+
+    const scene = new THREE.Scene();
+    const d = 0.9;
+    const camera = new THREE.OrthographicCamera(
+        -d, d, // Left, Right
+        d, -d,                   // Top, Bottom
+        1, 1000                  // Near, Far
+    );
+    const renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true
+    });
+    renderer.setSize(138, 138);
+    renderer.setPixelRatio(2);
+    const loader = new GLTFLoader();
+
+    const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+    const cube = new THREE.Mesh( geometry, material );
+    //scene.add( cube );
+
+    var magnum;
+
+    loader.load( 'assets/Magnum MC.glb', function ( gltf ) {
+        magnum = gltf.scene;
+
+        const scale = 5;
+        magnum.scale.set(scale, scale, scale);
+        magnum.rotation.set(0, toRadians(-140), 0);
+        magnum.position.set(0.34, -0.3, 0);
+        scene.add(magnum);
+    }, undefined, function ( error ) {
+        console.error( error );
+    } );
+
+    const light = new THREE.AmbientLight( {color: 0x404040, intensity: 10} ); // soft white light
+    scene.add( light );
+
+    camera.position.z = 5;
+    camera.position.y = 1.5;
+    camera.rotation.x = toRadians(-17);
+
+    setTimeout(() => {
+        document.querySelector(".item.size2x2").appendChild(renderer.domElement);
+    }, 100);
+
+    // renderer.render( scene, camera );
+
+    function animate( time ) {
+        renderer.render( scene, camera );
+    }
+    renderer.setAnimationLoop( animate );
 
 </script>
