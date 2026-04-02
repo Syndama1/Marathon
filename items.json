@@ -1,5 +1,21 @@
 [
     {
+        "section-name": "small-weapons",
+        "item-size": {
+            "x": 2,
+            "y": 2
+        },
+        "items":
+        [
+            {
+                "quality": "standard",
+                "name": "Magnum MC",
+                "mod-slot": "pistol",
+                "value": 50
+            }
+        ]
+    },
+    {
         "section-name": "shield-implants",
         "item-size": {
             "x": 2,
