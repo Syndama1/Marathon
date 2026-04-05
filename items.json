@@ -1,17 +1,59 @@
 [
     {
-        "section-name": "small-weapons",
-        "item-size": {
-            "x": 2,
-            "y": 2
-        },
+        "section-name": "weapons",
         "items":
-        [
+        [   
+            {
+                "quality": "standard",
+                "name": "Impact H-AR",
+                "inventory-size": {
+                    "x": 4,
+                    "y": 2
+                },
+                "description": "Heavy assault rifle with reinforced frame and high-caliber firing system.",
+                "item-type": "assault rifle",
+                "mod-slots": ["chip mod", "assault optic mod", "rifle optic mod", "assault magazine mod"],
+                "value": 50,
+                "model": "Impact-H-AR.glb"
+            },
+            {
+                "quality": "standard",
+                "name": "BR33 Volley Rifle",
+                "inventory-size": {
+                    "x": 4,
+                    "y": 2
+                },
+                "description": "Semi-automatic precision rifle with three-round burst fire.",
+                "item-type": "precision rifle",
+                "mod-slots": ["chip mod", "precision optic mod", "precision barrel mod", "precision magazine mod"],
+                "value": 50,
+                "model": "BR33-Volley-Rifle.glb"
+            },
+            {
+                "quality": "standard",
+                "name": "Misriah 2442",
+                "inventory-size": {
+                    "x": 4,
+                    "y": 2
+                },
+                "description": "Pump-action shotgun kept for close encounters. Reloads one MIPS cartrige at a time.",
+                "item-type": "shotgun",
+                "mod-slots": ["chip mod", "shotgun grip mod", "underbarrel mod", "magazine mod"],
+                "value": 50,
+                "model": "Misriah 2442.glb"
+            },
             {
                 "quality": "standard",
                 "name": "Magnum MC",
-                "mod-slot": "pistol",
-                "value": 50
+                "inventory-size": {
+                    "x": 2,
+                    "y": 2
+                },
+                "description": "Heavy pistol equipped with modular muzzle and optics rail.",
+                "item-type": "pistol",
+                "mod-slots": ["chip mod", "pistol optic mod", "CQC barrel mod"],
+                "value": 50,
+                "model": "Magnum MC.glb"
             }
         ]
     },
@@ -627,203 +669,203 @@
                 "quality": "enhanced",
                 "name": "Afterburner",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Sliding with this weapon <b>reloads</b> a portion of your magazine and </b>increases stability and accuracy</b> by a moderate amount.<br><br>Ballistic weapons reload from reserves. Volt weapons reload a smaller portion."
             },
             {
                 "quality": "deluxe",
                 "name": "Afterburner",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Sliding with this weapon <b>reloads</b> a portion of your magazine and </b>increases stability and accuracy</b> by a significant amount.<br><br>Ballistic weapons reload from reserves. Volt weapons reload a smaller portion."
             },
             {
                 "quality": "standard",
                 "name": "Alternating Current",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Restore a small amount of <b>health or shields</b> when damaging a target affected by <emp>."
             },
             {
                 "quality": "enhanced",
                 "name": "Alternating Current",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Restore a moderate amount of <b>health or shields</b> when damaging a target affected by <emp>."
             },
             {
                 "quality": "enhanced",
                 "name": "Background Process",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "When this weapon is stowed, it <b>automatically reloads</b> after a significant period of time."
             },
             {
                 "quality": "standard",
                 "name": "Battle Runner",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminations with this weapon grant <b>increased sprint speed</b> for a short duration."
             },
             {
                 "quality": "standard",
                 "name": "Bits Per Second",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Rapid precision hits temporarily <b>increase stability and reload speed</b> by a small amount."
             },
             {
                 "quality": "deluxe",
                 "name": "Bits Per Second",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Rapid precision hits temporarily <b>increase stability and reload speed</b> by a significant amount."
             },
             {
                 "quality": "superior",
                 "name": "Bits Per Second",
                 "value": "621",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Rapid precision hits temporarily <b>increase stability and reload speed</b> by a massive amount."
             },
             {
                 "quality": "standard",
                 "name": "Bounty Hunter",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating UESC <b>pays you a few credits</b>."
             },
             {
                 "quality": "enhanced",
                 "name": "Bounty Hunter",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating UESC <b>pays you a small amount of credits</b>."
             },
             {
                 "quality": "standard",
                 "name": "Chaos Theory",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Dealing a significant amount of sustained damage causes hostile to <b>drop random ammo</b>."
             },
             {
                 "quality": "enhanced",
                 "name": "Chaos Theory",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Dealing a considerable amount of sustained damage causes hostile to <b>drop random ammo</b>."
             },
             {
                 "quality": "deluxe",
                 "name": "Chaos Theory",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Dealing a moderate amount of sustained damage causes hostile to <b>drop random ammo</b>."
             },
             {
                 "quality": "enhanced",
                 "name": "Circuit Tracers",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminations with this weapon <b>reload the magazine</b> by a moderate amount."
             },
             {
                 "quality": "deluxe",
                 "name": "Circuit Tracers",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminations with this weapon <b>reload the magazine</b> by a significant amount."
             },
             {
                 "quality": "enhanced",
                 "name": "Cloudborn",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While in a smoke, reloading this weapon <b>overflows the magazine</b> by a moderate amount."
             },
             {
                 "quality": "enhanced",
                 "name": "Endless Runner",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While under the effects of <b>Cardio Kick</b>, eliminating hostile with this weapon extends its duration by a moderate ammount."
             },
             {
                 "quality": "enhanced",
                 "name": "Eyes on Fire",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Quickly after deactivation of a tactical or trait ability, eliminating a hostile grants a moderate amount of <b>tactical and trait ability energy</b>."
             },
             {
                 "quality": "enhanced",
                 "name": "Five Finger Discount",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating UESC or downing Runners with a <b>melee or knife</b> attack partially <b>reloads</b> this weapon by a moderate amount."
             },
             {
                 "quality": "standard",
                 "name": "Insomniac",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While under the effect of <b>Energy Amp</b>, eleminating hostiles with this weapon extends its duration by a small amount."
             },
             {
                 "quality": "enhanced",
                 "name": "Insomniac",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While under the effect of <b>Energy Amp</b>, eleminating hostiles with this weapon extends its duration by a moderate amount."
             },
             {
                 "quality": "deluxe",
                 "name": "Insomniac",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While under the effect of <b>Energy Amp</b>, eleminating hostiles with this weapon extends its duration by a significant amount."
             },
             {
                 "quality": "standard",
                 "name": "Insurance Plan",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While under the effects of a <b>Mechanic's Kit</b> or <b>OS Debug</b>, defeating a hostile extends its duration by a small amount."
             },
             {
                 "quality": "enhanced",
                 "name": "Insurance Plan",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While under the effects of a <b>Mechanic's Kit</b> or <b>OS Debug</b>, defeating a hostile moderately extends its duration."
             },
             {
                 "quality": "standard",
                 "name": "Insurrection",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "This weapon deals slightly <b>increased damage against UESC</b> forces."
             },
             {
                 "quality": "deluxe",
                 "name": "Insurrection",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "This weapon deals considerably <b>increased damage against UESC</b> forces."
             },
             {
                 "quality": "superior",
                 "name": "Insurrection",
                 "value": "621",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "This weapon deals significantly <b>increased damage against UESC</b> forces."
             },
             {
                 "quality": "enhanced",
                 "name": "Keyboard Warrior",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminations grant <b>stacks of bonus accuracy and range</b> for a moderate duration.",
                 "stat-changes": [
                     {
@@ -836,70 +878,70 @@
                 "quality": "standard",
                 "name": "Last Resort",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While you are <b><overheat>ed</b>, non-precision <b>damage is increased</b> by a small amount."
             },
             {
                 "quality": "enhanced",
                 "name": "Last Resort",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While you are <b><overheat>ed</b>, non-precision <b>damage is increased</b> by a moderate amount."
             },
             {
                 "quality": "enhanced",
                 "name": "Mini Jammer",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While aiming down signts for a moderate duration, you gain the <b>Signal Jammer</b> effect."
             },
             {
                 "quality": "deluxe",
                 "name": "Mini Jammer",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While aiming down signts for a brief duration, you gain the <b>Signal Jammer</b> effect."
             },
             {
                 "quality": "enhanced",
                 "name": "Opportunist",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While shields are depleted, shots on hostile targets have a moderate <b>chance to return ammo</b> to the magazine."
             },
             {
                 "quality": "superior",
                 "name": "Opportunist",
                 "value": "621",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While shields are depleted, shots on hostile targets have a significant <b>chance to return ammo</b> to the magazine."
             },
             {
                 "quality": "standard",
                 "name": "Optimal Prime",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Dealing damage quickly after your prime ability ends grants you the effects of <b>Energy Amp</b> for a short duration."
             },
             {
                 "quality": "enhanced",
                 "name": "Optimal Prime",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Dealing damage quickly after your prime ability ends grants you the effects of <b>Energy Amp</b> for a moderate duration."
             },
             {
                 "quality": "deluxe",
                 "name": "Optimal Prime",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Dealing damage quickly after your prime ability ends grants you the effects of <b>Energy Amp</b> for a considerable duration."
             },
             {
                 "quality": "enhanced",
                 "name": "Ornithologist",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "After aiming down sights for a brief duration, projectile impacts create a <b>distracting bird call</b>.",
                 "stat-changes": [
                     {
@@ -912,119 +954,119 @@
                 "quality": "superior",
                 "name": "Reckless Behaviour",
                 "value": "621",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "<b>Damage is increased</b> while your shields are depleted."
             },
             {
                 "quality": "standard",
                 "name": "Rocket Start",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating a hostile shortly after sprinting grants you the effects of <b>Cardio Kick</b> for a short duration."
             },
             {
                 "quality": "enhanced",
                 "name": "Rocket Start",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating a hostile shortly after sprinting grants you the effects of <b>Cardio Kick</b> for a moderate duration."
             },
             {
                 "quality": "enhanced",
                 "name": "Rorschach Test",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While surrounded by hostiles, <b>reloading overflows the magazine</b> by a moderate amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
             },
             {
                 "quality": "superior",
                 "name": "See Ya",
                 "value": "621",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Reloading this weapon when the magazine is empty causes you to become <b>briefly invisible</b>."
             },
             {
                 "quality": "enhanced",
                 "name": "Slip Protocol",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "While moving, this weapon's <b>stability and accuracy increase</b> by a moderate amount."
             },
             {
                 "quality": "standard",
                 "name": "Stack Overflow",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a small amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
             },
             {
                 "quality": "enhanced",
                 "name": "Stack Overflow",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a moderate amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
             },
             {
                 "quality": "deluxe",
                 "name": "Stack Overflow",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a significant amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
             },
             {
                 "quality": "superior",
                 "name": "Stack Overflow",
                 "value": "621",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Reloading this weapon when the magazine is empty <b>overflows the magazine</b> by a massive amount.<br><br>Ballistic weapons overflow from reserves. Volt weapons generate a smaller portion of overflow."
             },
             {
                 "quality": "standard",
                 "name": "Sucker Punch",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Slightly increases the <b>damage of your next melee attack</b> after dealing damage with this weapon."
             },
             {
                 "quality": "enhanced",
                 "name": "Sucker Punch",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Moderately increases the <b>damage of your next melee attack</b> after dealing damage with this weapon."
             },
             {
                 "quality": "standard",
                 "name": "Swarm Directive",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "<b>Precision eliminations</b> with this weapon spawn a <b>flechette seeker that heals you</b> when damaging hostiles."
             },
             {
                 "quality": "deluxe",
                 "name": "Swarm Directive",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Precision eliminations with this weapon spawn a moderate amount of <b>flechette seekers that heal you</b> when damaging hostiles."
             },
             {
                 "quality": "superior",
                 "name": "Swarm Directive",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Precision eliminations with this weapon spawn a large amount of <b>flechette seekers that heal you</b> when damaging hostiles."
             },
             {
                 "quality": "standard",
                 "name": "Torch Bug",
                 "value": "23",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating a hostile cause them to <b>explode</b>."
             },
             {
                 "quality": "enhanced",
                 "name": "Torch Bug",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating a hostile cause them to <b>explode</b>.",
                 "stat-changes": [
                     {
@@ -1037,7 +1079,7 @@
                 "quality": "deluxe",
                 "name": "Torch Bug",
                 "value": "207",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating a hostile cause them to <b>explode</b>.",
                 "stat-changes": [
                     {
@@ -1050,7 +1092,7 @@
                 "quality": "superior",
                 "name": "Torch Bug",
                 "value": "621",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Eliminating a hostile cause them to <b>explode</b>.",
                 "stat-changes": [
                     {
@@ -1063,7 +1105,7 @@
                 "quality": "enhanced",
                 "name": "Trigger Discipline",
                 "value": "69",
-                "mod-slot": "chip mod",
+                "item-type": "chip mod",
                 "description": "Grants a moderate amount of <b>increased accuracy</b> for the first few rounds of a trigger pull."
             }
         ]
@@ -1079,7 +1121,7 @@
                 "quality": "enhanced",
                 "name": "Precision Barrel",
                 "value": "60",
-                "mod-slot": "CQC barrel mod",
+                "item-type": "CQC barrel mod",
                 "description": "Slightly increases ADS accuracy and range.",
                 "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
             },
@@ -1087,7 +1129,7 @@
                 "quality": "deluxe",
                 "name": "Precision Barrel",
                 "value": "180",
-                "mod-slot": "CQC barrel mod",
+                "item-type": "CQC barrel mod",
                 "description": "Increases ADS accuracy and range.",
                 "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
             },
@@ -1095,7 +1137,7 @@
                 "quality": "enhanced",
                 "name": "Weighted Barrel",
                 "value": "60",
-                "mod-slot": "CQC barrel mod",
+                "item-type": "CQC barrel mod",
                 "description": "Slightly increases aim assist.",
                 "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
             },
@@ -1103,7 +1145,7 @@
                 "quality": "enhanced",
                 "name": "Nano-Suppressor",
                 "value": "69",
-                "mod-slot": "CQC barrel mod",
+                "item-type": "CQC barrel mod",
                 "description": "Slightly increases accuracy when firing from the hip.<h2>Suppressor</h2>Shots fired from this weapon are <b>silenced</b>.",
                 "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
             },
@@ -1111,7 +1153,7 @@
                 "quality": "deluxe",
                 "name": "Nano-Suppressor",
                 "value": "207",
-                "mod-slot": "CQC barrel mod",
+                "item-type": "CQC barrel mod",
                 "description": "Increases accuracy when firing from the hip.<h2>Suppressor</h2>Shots fired from this weapon are <b>silenced</b>.",
                 "compatible-weapons": ["BRRT SMG", "Copperhead RF", "Bully SMG", "CE Tactical Sidearm", "Magnum MC"]
             },
@@ -1119,7 +1161,7 @@
                 "quality": "deluxe",
                 "name": "Accu-Point Barrel",
                 "value": "180",
-                "mod-slot": "ion dampener mod",
+                "item-type": "ion dampener mod",
                 "description": "Increase ADS accuracy and aim assist.",
                 "compatible-weapons": ["V66 Lookout", "V99 Channel Rifle"]
             },
@@ -1127,7 +1169,7 @@
                 "quality": "enhanced",
                 "name": "Stabilizing Barrel",
                 "value": "60",
-                "mod-slot": "ion dampener mod",
+                "item-type": "ion dampener mod",
                 "description": "Slightly increases stability.",
                 "compatible-weapons": ["V66 Lookout", "V99 Channel Rifle"]
             },
@@ -1135,7 +1177,7 @@
                 "quality": "superior",
                 "name": "Rocksteady Barrel",
                 "value": "540",
-                "mod-slot": "ion dampener mod",
+                "item-type": "ion dampener mod",
                 "description": "Greatly increases accuracy while crouched, ADS accuracy, and range.",
                 "compatible-weapons": ["V66 Lookout", "V99 Channel Rifle"]
             },
@@ -1143,7 +1185,7 @@
                 "quality": "enhanced",
                 "name": "Hi-Focus Dampener",
                 "value": "60",
-                "mod-slot": "volt dampener mod",
+                "item-type": "volt dampener mod",
                 "description": "Slightly increases stability and movement speed with this weapon.",
                 "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
             },
@@ -1151,7 +1193,7 @@
                 "quality": "enhanced",
                 "name": "Hipshot Dampener",
                 "value": "60",
-                "mod-slot": "volt dampener mod",
+                "item-type": "volt dampener mod",
                 "description": "Slightly increases accuracy when firing from the hip and movement speed with this weapon.",
                 "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
             },
@@ -1159,7 +1201,7 @@
                 "quality": "enhanced",
                 "name": "Suppression Dampener",
                 "value": "69",
-                "mod-slot": "volt dampener mod",
+                "item-type": "volt dampener mod",
                 "description": "Slightly increases ADS accuracy.<h2>Suppressor</h2>Shots fired from this weapon are <b>silenced</b>.",
                 "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
             },
@@ -1167,7 +1209,7 @@
                 "quality": "deluxe",
                 "name": "Suppression Dampener",
                 "value": "207",
-                "mod-slot": "volt dampener mod",
+                "item-type": "volt dampener mod",
                 "description": "Increases ADS accuracy.<h2>Suppressor</h2>Shots fired from this weapon are <b>silenced</b>.",
                 "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
             },
@@ -1175,7 +1217,7 @@
                 "quality": "enhanced",
                 "name": "Accu-Point Dampener",
                 "value": "60",
-                "mod-slot": "volt dampener mod",
+                "item-type": "volt dampener mod",
                 "description": "Slightly increases range.",
                 "compatible-weapons": ["V75 SCAR", "V11 Punch", "V22 Volt Thrower"]
             },
@@ -1183,7 +1225,7 @@
                 "quality": "enhanced",
                 "name": "Ironhold Choke",
                 "value": "60",
-                "mod-slot": "underbarrel mod",
+                "item-type": "underbarrel mod",
                 "description": "Slightly increases aim assist.",
                 "compatible-weapons": ["WSTR Combat Shotgun", "Misriah 2442"]
             },
@@ -1191,7 +1233,7 @@
                 "quality": "enhanced",
                 "name": "Impulse Break",
                 "value": "60",
-                "mod-slot": "precision barrel mod",
+                "item-type": "precision barrel mod",
                 "description": "Slightly increases ADS accuracy.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
             },
@@ -1199,7 +1241,7 @@
                 "quality": "enhanced",
                 "name": "Tru-Shot Barrel",
                 "value": "60",
-                "mod-slot": "precision barrel mod",
+                "item-type": "precision barrel mod",
                 "description": "Slightly increases aim assist.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
             },
@@ -1207,7 +1249,7 @@
                 "quality": "enhanced",
                 "name": "Steady Barrel",
                 "value": "60",
-                "mod-slot": "precision barrel mod",
+                "item-type": "precision barrel mod",
                 "description": "Slightly increases stability.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
             },
@@ -1215,7 +1257,7 @@
                 "quality": "enhanced",
                 "name": "Farshot Barrel",
                 "value": "60",
-                "mod-slot": "precision barrel mod",
+                "item-type": "precision barrel mod",
                 "description": "Slightly increases ADS accuracy and range.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
             },
@@ -1223,7 +1265,7 @@
                 "quality": "deluxe",
                 "name": "Farshot Barrel",
                 "value": "180",
-                "mod-slot": "precision barrel mod",
+                "item-type": "precision barrel mod",
                 "description": "Increases ADS accuracy and range.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot", "Outland"]
             }
@@ -1240,7 +1282,7 @@
                 "quality": "enhanced",
                 "name": "Combat Grip",
                 "value": "60",
-                "mod-slot": "rifle grip mod",
+                "item-type": "rifle grip mod",
                 "description": "Slightly increases ADS speed and ready speed.",
                 "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR"]
             },
@@ -1248,7 +1290,7 @@
                 "quality": "deluxe",
                 "name": "Vigilant Grip",
                 "value": "180",
-                "mod-slot": "rifle grip mod",
+                "item-type": "rifle grip mod",
                 "description": "Increase ready speed and stability.",
                 "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR"]
             },
@@ -1256,7 +1298,7 @@
                 "quality": "enhanced",
                 "name": "Hipshot Grip",
                 "value": "60",
-                "mod-slot": "shotgun grip mod",
+                "item-type": "shotgun grip mod",
                 "description": "Slightly increases accuracy when firing from the hip.",
                 "compatible-weapons": ["WSTR Combat Shotgun", "Misriah 2442", "V85 Circuit Breaker"]
             },
@@ -1264,7 +1306,7 @@
                 "quality": "deluxe",
                 "name": "Snapshot Grip",
                 "value": "180",
-                "mod-slot": "shotgun grip mod",
+                "item-type": "shotgun grip mod",
                 "description": "Increases accuracy while moving and ADS speed.",
                 "compatible-weapons": ["WSTR Combat Shotgun", "Misriah 2442", "V85 Circuit Breaker"]
             }
@@ -1281,7 +1323,7 @@
                 "quality": "enhanced",
                 "name": "Hollow-Case Rounds",
                 "value": "69",
-                "mod-slot": "assault magazine mod",
+                "item-type": "assault magazine mod",
                 "description": "Slightly increases magazine size, reload speed, and range.",
                 "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR", "Copperhead RF", "Bully SMG"]
             },
@@ -1289,7 +1331,7 @@
                 "quality": "deluxe",
                 "name": "Reloader Mag",
                 "value": "207",
-                "mod-slot": "assault magazine mod",
+                "item-type": "assault magazine mod",
                 "description": "Increases reload speed and magazine size.",
                 "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR", "Copperhead RF", "Bully SMG"]
             },
@@ -1297,7 +1339,7 @@
                 "quality": "enhanced",
                 "name": "Steady Rounds",
                 "value": "69",
-                "mod-slot": "assault magazine mod",
+                "item-type": "assault magazine mod",
                 "description": "Slightly increases stability and magazine size.",
                 "compatible-weapons": ["M77 Assault Rifle", "Overrun AR", "Impact H-AR", "Copperhead RF", "Bully SMG"]
             },
@@ -1305,7 +1347,7 @@
                 "quality": "enhanced",
                 "name": "Cloudfeather Belt",
                 "value": "69",
-                "mod-slot": "belt-fed magazine mod",
+                "item-type": "belt-fed magazine mod",
                 "description": "Slightly increases reload speed and magazine size.",
                 "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
             },
@@ -1313,7 +1355,7 @@
                 "quality": "deluxe",
                 "name": "Cloudfeather Belt",
                 "value": "207",
-                "mod-slot": "belt-fed magazine mod",
+                "item-type": "belt-fed magazine mod",
                 "description": "Increases reload speed and magazine size.",
                 "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
             },
@@ -1321,7 +1363,7 @@
                 "quality": "enhanced",
                 "name": "Turbo Belt",
                 "value": "69",
-                "mod-slot": "belt-fed magazine mod",
+                "item-type": "belt-fed magazine mod",
                 "description": "Slightly incrases magazine size, reload speed, and movement speed with this weapon.",
                 "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
             },
@@ -1329,7 +1371,7 @@
                 "quality": "deluxe",
                 "name": "BFM",
                 "value": "153",
-                "mod-slot": "pistol magazine mod",
+                "item-type": "pistol magazine mod",
                 "description": "Greatly increases magazine size.",
                 "compatible-weapons": ["CE Tactical Sidearm"]
             },
@@ -1337,7 +1379,7 @@
                 "quality": "deluxe",
                 "name": "Hi-Speed Belt",
                 "value": "126",
-                "mod-slot": "pistol magazine mod",
+                "item-type": "pistol magazine mod",
                 "description": "Increases reload speed and magazine size.",
                 "compatible-weapons": ["CE Tactical Sidearm"]
             },
@@ -1345,7 +1387,7 @@
                 "quality": "enhanced",
                 "name": "Combat Mag",
                 "value": "207",
-                "mod-slot": "precision magazine mod",
+                "item-type": "precision magazine mod",
                 "description": "Slightly increases magazine size, reload speed, and range.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot"]
             },
@@ -1353,7 +1395,7 @@
                 "quality": "deluxe",
                 "name": "Combat Mag",
                 "value": "207",
-                "mod-slot": "precision magazine mod",
+                "item-type": "precision magazine mod",
                 "description": "Increases magazine size, reload speed, and range.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot"]
             },
@@ -1361,7 +1403,7 @@
                 "quality": "deluxe",
                 "name": "Hi-Cap Mag",
                 "value": "234",
-                "mod-slot": "precision magazine mod",
+                "item-type": "precision magazine mod",
                 "description": "Greatly increases magazine size.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "BR33 Volley Rifle", "Twin Tap HBR", "Longshot"]
             },
@@ -1369,7 +1411,7 @@
                 "quality": "enhanced",
                 "name": "Turbo Chamber",
                 "value": "69",
-                "mod-slot": "volt array mod",
+                "item-type": "volt array mod",
                 "description": "Slightly increases reload speed and magazine size.",
                 "compatible-weapons": ["V22 Volt Thrower", "V11 Punch", "V75 SCAR", "V66 Lookout"]
             },
@@ -1377,7 +1419,7 @@
                 "quality": "deluxe",
                 "name": "Turbo Chamber",
                 "value": "207",
-                "mod-slot": "volt array mod",
+                "item-type": "volt array mod",
                 "description": "Increases reload speed and magazine size.",
                 "compatible-weapons": ["V22 Volt Thrower", "V11 Punch", "V75 SCAR", "V66 Lookout"]
             },
@@ -1385,7 +1427,7 @@
                 "quality": "enhanced",
                 "name": "Hi-Cap Chamber",
                 "value": "78",
-                "mod-slot": "volt array mod",
+                "item-type": "volt array mod",
                 "description": "Increases magazine size.",
                 "compatible-weapons": ["V22 Volt Thrower", "V11 Punch", "V75 SCAR", "V66 Lookout"]
             },
@@ -1393,7 +1435,7 @@
                 "quality": "superior",
                 "name": "Air-Cooled Chamber",
                 "value": 621,
-                "mod-slot": "volt cell mod",
+                "item-type": "volt cell mod",
                 "description": "Greatly increases reload speed and magazine size.",
                 "compatible-weapons": ["V99 Channel Rifle", "V00 ZEUS RG", "V85 Circuit Breaker"]
             },
@@ -1401,7 +1443,7 @@
                 "quality": "enhanced",
                 "name": "Hi-Cap Heat Sink",
                 "value": "78",
-                "mod-slot": "volt cell mod",
+                "item-type": "volt cell mod",
                 "description": "Increases magazine size.",
                 "compatible-weapons": ["V99 Channel Rifle", "V00 ZEUS RG", "V85 Circuit Breaker"]
             },
@@ -1409,7 +1451,7 @@
                 "quality": "deluxe",
                 "name": "Tapered Heat Sink",
                 "value": "207",
-                "mod-slot": "volt cell mod",
+                "item-type": "volt cell mod",
                 "description": "Increases reload speed and magazine size.",
                 "compatible-weapons": ["V99 Channel Rifle", "V00 ZEUS RG", "V85 Circuit Breaker"]
             },
@@ -1417,7 +1459,7 @@
                 "quality": "enhanced",
                 "name": "Turbo Drive",
                 "value": "69",
-                "mod-slot": "magazine mod",
+                "item-type": "magazine mod",
                 "description": "Slightly increases reload speed and magazine size.",
                 "compatible-weapons": ["ARES RG"]
             },
@@ -1425,7 +1467,7 @@
                 "quality": "superior",
                 "name": "Hi-Velocity Payload",
                 "value": "621",
-                "mod-slot": "magazine mod",
+                "item-type": "magazine mod",
                 "description": "Greatly increases magazine size and reload speed.",
                 "compatible-weapons": ["ARES RG"]
             },
@@ -1433,7 +1475,7 @@
                 "quality": "enhanced",
                 "name": "Compartmental Mag I",
                 "value": "60",
-                "mod-slot": "magazine mod",
+                "item-type": "magazine mod",
                 "description": "Slightly increases magazine size and range.",
                 "compatible-weapons": ["Misriah 2442"]
             },
@@ -1441,7 +1483,7 @@
                 "quality": "deluxe",
                 "name": "Compartmental Mag II",
                 "value": "180",
-                "mod-slot": "magazine mod",
+                "item-type": "magazine mod",
                 "description": "Increases magazine size and range.",
                 "compatible-weapons": ["Misriah 2442"]
             }
@@ -1458,7 +1500,7 @@
                 "quality": "enhanced",
                 "name": "Midsight Optic",
                 "value": "69",
-                "mod-slot": "assault optic mod",
+                "item-type": "assault optic mod",
                 "description": "Slightly increases zoom, accuracy while moving, and ADS accuracy.",
                 "compatible-weapons": ["Overrun AR", "Impact H-AR", "V75 SCAR", "BRRT SMG", "Copperhead RF", "Bully SMG"]
             },
@@ -1466,7 +1508,7 @@
                 "quality": "deluxe",
                 "name": "Midsight Optic",
                 "value": "207",
-                "mod-slot": "assault optic mod",
+                "item-type": "assault optic mod",
                 "description": "Increases zoom, accuracy while moving, and ADS accuracy.",
                 "compatible-weapons": ["Overrun AR", "Impact H-AR", "V75 SCAR", "BRRT SMG", "Copperhead RF", "Bully SMG"]
             },
@@ -1474,7 +1516,7 @@
                 "quality": "enhanced",
                 "name": "Far Reach Optic",
                 "value": "69",
-                "mod-slot": "assault optic mod",
+                "item-type": "assault optic mod",
                 "description": "Slightly incrases zoom and range.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
                 "compatible-weapons": ["Overrun AR", "Impact H-AR", "V75 SCAR", "BRRT SMG", "Copperhead RF", "Bully SMG"]
             },
@@ -1482,7 +1524,7 @@
                 "quality": "enhanced",
                 "name": "Twinscope Optic",
                 "value": "69",
-                "mod-slot": "assault optic mod",
+                "item-type": "assault optic mod",
                 "description": "Slightly incrases zoom, ADS speed, and ADS accuracy.<h2>Toggle Zoom</h2>Alt Press: <b>Toggle zoom</b> level while aimed down sights.",
                 "compatible-weapons": ["Overrun AR", "Impact H-AR", "V75 SCAR", "BRRT SMG", "Copperhead RF", "Bully SMG"]
             },
@@ -1490,7 +1532,7 @@
                 "quality": "deluxe",
                 "name": "Clear-Eyed Lens",
                 "value": "207",
-                "mod-slot": "LMG optic mod",
+                "item-type": "LMG optic mod",
                 "description": "Increases zoom, ADS speed, and ADS accuracy.",
                 "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
             },
@@ -1498,7 +1540,7 @@
                 "quality": "enhanced",
                 "name": "Vigilant Lens",
                 "value": "51",
-                "mod-slot": "pistol optic mod",
+                "item-type": "pistol optic mod",
                 "description": "Slightly increases zoom, ADS speed, and ADS accuracy.",
                 "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
             },
@@ -1506,7 +1548,7 @@
                 "quality": "deluxe",
                 "name": "Vigilant Lens",
                 "value": "153",
-                "mod-slot": "pistol optic mod",
+                "item-type": "pistol optic mod",
                 "description": "Increases zoom, ADS speed, and ADS accuracy.",
                 "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
             },
@@ -1514,7 +1556,7 @@
                 "quality": "enhanced",
                 "name": "Oracle Lens",
                 "value": "51",
-                "mod-slot": "pistol optic mod",
+                "item-type": "pistol optic mod",
                 "description": "Increases ADS speed, accuracy while moving, and ADS accuracy.",
                 "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
             },
@@ -1522,7 +1564,7 @@
                 "quality": "deluxe",
                 "name": "Oracle Lens",
                 "value": "153",
-                "mod-slot": "pistol optic mod",
+                "item-type": "pistol optic mod",
                 "description": "Increases ADS speed, accuracy while moving, and ADS accuracy.",
                 "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
             },
@@ -1530,7 +1572,7 @@
                 "quality": "enhanced",
                 "name": "Rangefinder Lens",
                 "value": "51",
-                "mod-slot": "pistol optic mod",
+                "item-type": "pistol optic mod",
                 "description": "Slightly increases zoom and ADS accuracy.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
                 "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
             },
@@ -1538,7 +1580,7 @@
                 "quality": "deluxe",
                 "name": "Rangefinder Lens",
                 "value": "153",
-                "mod-slot": "pistol optic mod",
+                "item-type": "pistol optic mod",
                 "description": "Increases zoom and ADS accuracy.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
                 "compatible-weapons": ["CE Tactical Sidearm", "Magnum MC", "V11 Punch"]
             },
@@ -1546,7 +1588,7 @@
                 "quality": "enhanced",
                 "name": "Rangerfinder Optic",
                 "value": "69",
-                "mod-slot": "precision optic mod",
+                "item-type": "precision optic mod",
                 "description": "Slightly increases zoom, ADS accuracy, and accuracy while moving.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR"]
             },
@@ -1554,7 +1596,7 @@
                 "quality": "deluxe",
                 "name": "Rangerfinder Optic",
                 "value": "207",
-                "mod-slot": "precision optic mod",
+                "item-type": "precision optic mod",
                 "description": "Increases zoom, ADS accuracy, and accuracy while moving.<h2>Rangefinder</h2>Uses laser pulses to measure distance to the target.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR"]
             },
@@ -1562,7 +1604,7 @@
                 "quality": "enhanced",
                 "name": "Hi-Zoom Optic",
                 "value": "69",
-                "mod-slot": "precision optic mod",
+                "item-type": "precision optic mod",
                 "description": "Slightly increases zoom, range, and ADS accuracy.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR"]
             },
@@ -1570,7 +1612,7 @@
                 "quality": "enhanced",
                 "name": "Cold Vigilance Scope",
                 "value": "69",
-                "mod-slot": "precision optic mod",
+                "item-type": "precision optic mod",
                 "description": "Slightly increases zoom, ADS speed, and ADS accuracy.",
                 "compatible-weapons": ["Stryder M1T", "Hardline PR", "Repeater HPR", "V66 Lookout", "BR33 Volley Rifle", "Twin Tap HBR"]
             },
@@ -1578,7 +1620,7 @@
                 "quality": "enhanced",
                 "name": "Accu-Sight Scope",
                 "value": "69",
-                "mod-slot": "sniper optic mod",
+                "item-type": "sniper optic mod",
                 "description": "Increases zoom and slightly increases ADS speed and ADS accuracy.",
                 "compatible-weapons": ["Longshot", "Outland", "V99 Channel Rifle"]
             },
@@ -1586,7 +1628,7 @@
                 "quality": "deluxe",
                 "name": "Neuro-Optic Lens",
                 "value": "207",
-                "mod-slot": "sniper optic mod",
+                "item-type": "sniper optic mod",
                 "description": "Slightly increased zoom and increases ADS speed.<h2>Toggle Zoom</h2>Alt Press: <b>Toggle zoom</b> level while aimed down sights.",
                 "compatible-weapons": ["Longshot", "Outland", "V99 Channel Rifle"]
             },
@@ -1594,7 +1636,7 @@
                 "quality": "deluxe",
                 "name": "SP Scope II",
                 "value": "234",
-                "mod-slot": "sniper optic mod",
+                "item-type": "sniper optic mod",
                 "description": "Increases zoom and ADS accuracy.<h2>Thermal Sight</h2>This sight <b>highlights</b> hostile heat signatures.",
                 "compatible-weapons": ["Longshot", "Outland", "V99 Channel Rifle"]
             }
@@ -1611,7 +1653,7 @@
                 "quality": "enhanced",
                 "name": "Turbo Generator",
                 "value": "69",
-                "mod-slot": "generator mod",
+                "item-type": "generator mod",
                 "description": "Slightly increases ADS speed and charge time.",
                 "compatible-weapons": ["V00 ZEUS RG", "ARES RG"]
             },
@@ -1619,7 +1661,7 @@
                 "quality": "enhanced",
                 "name": "Stabilizing Generator",
                 "value": "69",
-                "mod-slot": "generator mod",
+                "item-type": "generator mod",
                 "description": "Slightly increases stability.",
                 "compatible-weapons": ["V00 ZEUS RG", "ARES RG"]
             }
@@ -1636,7 +1678,7 @@
                 "quality": "enhanced",
                 "name": "Balanced Shield",
                 "value": "69",
-                "mod-slot": "shield mod",
+                "item-type": "shield mod",
                 "description": "Slightly increases ready speed and movement speed with this weapon.<h2>Assault Shield</h2>Z Press: Activate an <b>energy shield</b> that absorbs incoming damage.",
                 "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
             },
@@ -1644,7 +1686,7 @@
                 "quality": "enhanced",
                 "name": "Control Shield",
                 "value": "69",
-                "mod-slot": "shield mod",
+                "item-type": "shield mod",
                 "description": "Slightly increases stability.<h2>Assault Shield</h2>Z Press: Activate an <b>energy shield</b> that absorbs incoming damage.",
                 "compatible-weapons": ["Conquest LMG", "Retaliator LMG", "Demolition HMG"]
             }
