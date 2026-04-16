@@ -815,13 +815,11 @@
     }
 
     .item[data-width] {
-        --width: 0px;
-        width: calc((var(--width) * 65px) + ((var(--width) - 1) * 8px));
+        width: calc((attr(data-width number) * 65px) + ((attr(data-width number) - 1) * 8px));
     }
 
     .item[data-height] {
-        --height: 0px;
-        height: calc((var(--height) * 65px) + (var(--height) - 1) * 8px);
+        height: calc((attr(data-height number) * 65px) + ((attr(data-height number) - 1) * 8px));
     }
 
     .item div {
@@ -999,13 +997,11 @@
     }
 
     .item-slot[data-width] {
-        --width: 0px;
-        width: calc((var(--width) * 65px) + ((var(--width) - 1) * 8px));
+        width: calc((attr(data-width number) * 65px) + ((attr(data-width number) - 1) * 8px));
     }
 
     .item-slot[data-height] {
-        --height: 0px;
-        height: calc((var(--height) * 65px) + ((var(--height) - 1) * 8px));
+        height: calc((attr(data-height number) * 65px) + ((attr(data-height number) - 1) * 8px));
     }
 
     .slot-title {
@@ -1404,7 +1400,6 @@
                     var newItem = Object.assign(document.createElement('div'), { classList: "item master" });
                     if(item["model"] != null) {
                         newItem.setAttribute('data-model-name', item["model"].replace(/\s+/g, '-'));
-                        window.load3DModel("assets/" + item["model"].replace(/\s+/g, '-'));
                     }
                     newItem.setAttribute('data-width', itemSize.x);
                     newItem.setAttribute('data-height', itemSize.y);
@@ -1521,6 +1516,7 @@
 
         let pressTimer = setTimeout(() => {
             
+            window.holdingItem = true;
             document.removeEventListener('mouseup', mouseShortPress);
             ghost.classList.add("ghost");
             let dupeCanvas = ghost.querySelector("#liveCanvas");
@@ -1605,7 +1601,6 @@
                 if(thisItem.classList.contains("gun")) {
                     thisItem.querySelector(".item-background").remove();
                     thisItem.setAttribute("data-width", 4);
-                    thisItem.style.setProperty("--width", thisItem.getAttribute("data-width"));
                     drawItemBackground(thisItem);
                 }
 
@@ -1625,7 +1620,6 @@
                 if(thisItem.classList.contains("gun")) {
                     thisItem.querySelector(".item-background").remove();
                     thisItem.setAttribute("data-width", 4);
-                    thisItem.style.setProperty("--width", thisItem.getAttribute("data-width"));
                     drawItemBackground(thisItem);
                 }
 
@@ -1817,16 +1811,10 @@
     const toCanvasSize = (units) => (65 * units) + (8 * (units - 1));
 
     var modelList = [];
-    var newModelList = [];
 
     const loader = new GLTFLoader();
 
-    window.load3DModel = async (url) => {
-        newModelList.push(await loader.loadAsync( url ));
-        console.log(url);
-    };
-
-    window.generateIconModels = () => {
+    setTimeout(() => {
 
         for (const element of document.querySelectorAll("[data-model-name]")) {
             const width = element.getAttribute("data-width");
@@ -1911,10 +1899,9 @@
             }, undefined, function ( error ) {
                 console.error( error );
             });
-
         }
 
-    };
+    }, 100);
 
     window.generateHoverModel = function (element) {
         const startRender = (e) => {
