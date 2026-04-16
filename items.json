@@ -2,20 +2,7 @@
     {
         "section-name": "weapons",
         "items":
-        [
-            {
-                "quality": "standard",
-                "name": "Magnum MC",
-                "inventory-size": {
-                    "x": 2,
-                    "y": 2
-                },
-                "description": "Heavy pistol equipped with modular muzzle and optics rail.",
-                "item-type": "pistol",
-                "mod-slots": ["chip mod", "pistol optic mod", "CQC barrel mod"],
-                "value": 50,
-                "model": "Magnum MC.glb"
-            },
+        [   
             {
                 "quality": "standard",
                 "name": "Impact H-AR",
@@ -54,6 +41,19 @@
                 "mod-slots": ["chip mod", "shotgun grip mod", "underbarrel mod", "magazine mod"],
                 "value": 50,
                 "model": "Misriah 2442.glb"
+            },
+            {
+                "quality": "standard",
+                "name": "Magnum MC",
+                "inventory-size": {
+                    "x": 2,
+                    "y": 2
+                },
+                "description": "Heavy pistol equipped with modular muzzle and optics rail.",
+                "item-type": "pistol",
+                "mod-slots": ["chip mod", "pistol optic mod", "CQC barrel mod"],
+                "value": 50,
+                "model": "Magnum MC.glb"
             }
         ]
     },
