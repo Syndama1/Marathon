@@ -1600,6 +1600,10 @@
                 if(thisItem.classList.contains("gun")) {
                     thisItem.querySelector(".item-background").remove();
                     thisItem.setAttribute("data-width", 4);
+                    if(thisItem.getAttribute("data-model-scale") != 1) {
+                        thisItem.setAttribute("data-model-scale", 1);
+                        window.drawThumbnail(thisItem);
+                    }
                     drawItemBackground(thisItem);
                 }
 
@@ -1619,6 +1623,10 @@
                 if(thisItem.classList.contains("gun")) {
                     thisItem.querySelector(".item-background").remove();
                     thisItem.setAttribute("data-width", 4);
+                    if(thisItem.getAttribute("data-model-scale") != 1) {
+                        thisItem.setAttribute("data-model-scale", 1);
+                        window.drawThumbnail(thisItem);
+                    }
                     drawItemBackground(thisItem);
                 }
 
@@ -1878,10 +1886,13 @@
                 itemElement.addEventListener("mouseover", startRender);
                 itemElement.addEventListener("mouseleave", endRender);
                 modelList.push(model);
-                const scale = 5 * scaleAdjustment;
+                const scale = 5;
                 model.scale.set(scale, scale, scale);
                 model.rotation.set(0, toRadians(-155), 0);
-                scene.add(model);
+                var modelGroup = new THREE.Group();
+                modelGroup.add(model);
+                modelGroup.scale.set(scaleAdjustment, scaleAdjustment, scaleAdjustment);
+                scene.add(modelGroup);
 
                 renderer.render(scene, camera);
                 var base64 = prerenderCanvas.toDataURL('img/png');
@@ -1903,6 +1914,54 @@
         }
 
     }, 100);
+
+    window.drawThumbnail = function (element) {
+        element.querySelector("img.thumbnail").remove();
+
+        const width = element.getAttribute("data-width");
+        const height = element.getAttribute("data-height");
+        const itemModelName = element.getAttribute("data-model-name");
+        const itemElement = element;
+
+        const redrawScene = new THREE.Scene();
+        const d = 1;
+        
+        const scaleAdjustment = itemElement.getAttribute("data-model-scale") ?? 1;
+        const aspect = width / height;
+        const redrawCamera = new THREE.OrthographicCamera(
+            -d * aspect, d * aspect, // Left, Right
+            d, -d,                   // Top, Bottom
+            1, 1000                  // Near, Far
+        );
+        const prerenderCanvas = document.createElement('canvas');
+        document.body.appendChild(prerenderCanvas);
+        const renderer = new THREE.WebGLRenderer({
+            alpha: true,
+            antialias: true,
+            preserveDrawingBuffer: true,
+            canvas: prerenderCanvas
+        });
+        prerenderCanvas.id = "prerenderCanvas";
+        prerenderCanvas.style = "position: absolute; top: 0;";
+        var model = modelList[itemElement.getAttribute("data-loaded-model-index")];
+        var scale = 1;
+        model.scale.set(scale, scale, scale);
+        model.rotation.set(0, toRadians(-155), 0);
+        redrawScene.add(model);
+
+        renderer.render(redrawScene, redrawCamera);
+        var base64 = prerenderCanvas.toDataURL('img/png');
+        // prerenderCanvas.style.display = "none";
+        var img = document.createElement('img');
+        img.src = base64;
+        img.style.height = "100%";
+        img.style.position = "relative";
+        img.style.left = "50%";
+        img.style.transform = "translateX(-50%)"
+        img.style.pointerEvents = "none";
+        img.classList.add("thumbnail");
+        itemElement.appendChild(img);
+    }
 
     window.generateHoverModel = function (element) {
         const startRender = (e) => {
@@ -1950,7 +2009,7 @@
 
     function startItemRender(event, modelIndex, width, height, modelScale) {
         liveModel = modelList[modelIndex];
-        const scale = 5;
+        const scale = 5 * modelScale;
         liveModel.scale.set(scale, scale, scale);
         liveModel.rotation.set(0, toRadians(-155), 0);
         modelGroup = new THREE.Group();
