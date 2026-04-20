@@ -54,6 +54,20 @@
                 "mod-slots": ["chip mod", "pistol optic mod", "CQC barrel mod"],
                 "value": 50,
                 "model": "Magnum MC.glb"
+            },
+            {
+                "quality": "standard",
+                "name": "WSTR Combat Shotgun",
+                "inventory-size": {
+                    "x": 2,
+                    "y": 2
+                },
+                "description": "Ballistic double-barrel shotgun. Packs high damage in close quarters.",
+                "item-type": "shotgun",
+                "mod-slots": ["chip mod", "pistol optic mod", "CQC barrel mod"],
+                "value": 2400,
+                "model": "WSTR-Combat-Shotgun.glb",
+                "model-scale": 0.6
             }
         ]
     },

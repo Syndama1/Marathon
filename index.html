@@ -1401,6 +1401,7 @@
                     if(item["model"] != null) {
                         newItem.setAttribute('data-model-name', item["model"].replace(/\s+/g, '-'));
                     }
+                    newItem.setAttribute('data-model-scale', item["model-scale"] ?? 1);
                     newItem.setAttribute('data-width', itemSize.x);
                     newItem.setAttribute('data-height', itemSize.y);
                     newItem.addEventListener('contextmenu', function(e) {
@@ -1818,9 +1819,12 @@
             const width = element.getAttribute("data-width");
             const height = element.getAttribute("data-height");
             const itemModelName = element.getAttribute("data-model-name");
+            const itemElement = element;
 
             const scene = new THREE.Scene();
             const d = 1;
+            
+            const scaleAdjustment = itemElement.getAttribute("data-model-scale") ?? 1;
             const aspect = width / height;
             const camera = new THREE.OrthographicCamera(
                 -d * aspect, d * aspect, // Left, Right
@@ -1848,42 +1852,40 @@
             camera.rotation.x = toRadians(-17);
 
             renderer.setPixelRatio(2);
-            console.log("assets/" + itemModelName);
             var model;
 
             const startRender = (e) => {
                 if(window.holdingItem) { return; }
-                startItemRender(e, element.getAttribute("data-loaded-model-index"), element.getAttribute("data-width"), element.getAttribute("data-height"));
-                element.querySelector(".thumbnail").style.display = "none";
-                element.addEventListener("mousemove", duringRender);
+                startItemRender(e, itemElement.getAttribute("data-loaded-model-index"), itemElement.getAttribute("data-width"), itemElement.getAttribute("data-height"), itemElement.getAttribute("data-model-scale"));
+                itemElement.querySelector(".thumbnail").style.display = "none";
+                itemElement.addEventListener("mousemove", duringRender);
             };
 
             const duringRender = (e) => {
-                renderItem(e, element.getAttribute("data-loaded-model-index"), toCanvasSize(element.getAttribute("data-width")), toCanvasSize(element.getAttribute("data-height")));
+                renderItem(e, itemElement.getAttribute("data-loaded-model-index"), toCanvasSize(itemElement.getAttribute("data-width")), toCanvasSize(itemElement.getAttribute("data-height"), itemElement.getAttribute("data-model-scale")));
             };
 
             const endRender = (e) => {
-                endItemRender(e, element.getAttribute("data-loaded-model-index"));
-                element.querySelector(".thumbnail").style.display = null;
-                element.removeEventListener("mousemove", duringRender);
+                endItemRender(e, itemElement.getAttribute("data-loaded-model-index"));
+                itemElement.querySelector(".thumbnail").style.display = null;
+                itemElement.removeEventListener("mousemove", duringRender);
             };
 
             renderer.setSize(toCanvasSize(width), toCanvasSize(height));
             loader.load('assets/' + itemModelName.replace(/\s+/g, '-'), function ( gltf ) {
                 model = gltf.scene;
-                element.setAttribute("data-loaded-model-index", modelList.length);
-                element.addEventListener("mouseover", startRender);
-                element.addEventListener("mouseleave", endRender);
+                itemElement.setAttribute("data-loaded-model-index", modelList.length);
+                itemElement.addEventListener("mouseover", startRender);
+                itemElement.addEventListener("mouseleave", endRender);
                 modelList.push(model);
-                const scale = 5;
+                const scale = 5 * scaleAdjustment;
                 model.scale.set(scale, scale, scale);
                 model.rotation.set(0, toRadians(-155), 0);
                 scene.add(model);
 
                 renderer.render(scene, camera);
-                const cav = document.querySelector('#prerenderCanvas');
-                var base64 = cav.toDataURL('img/png');
-                cav.remove();
+                var base64 = prerenderCanvas.toDataURL('img/png');
+                prerenderCanvas.style.display = "none";
                 var img = document.createElement('img');
                 img.src = base64;
                 img.style.height = "100%";
@@ -1892,7 +1894,8 @@
                 img.style.transform = "translateX(-50%)"
                 img.style.pointerEvents = "none";
                 img.classList.add("thumbnail");
-                document.querySelector("[data-model-name='" + itemModelName.replace(/\s+/g, '-') + "']").appendChild(img);
+                itemElement.appendChild(img);
+                prerenderCanvas.remove();
 
             }, undefined, function ( error ) {
                 console.error( error );
@@ -1904,13 +1907,13 @@
     window.generateHoverModel = function (element) {
         const startRender = (e) => {
             if(window.holdingItem) { return; }
-            startItemRender(e, element.getAttribute("data-loaded-model-index"), element.getAttribute("data-width"), element.getAttribute("data-height"));
+            startItemRender(e, element.getAttribute("data-loaded-model-index"), element.getAttribute("data-width"), element.getAttribute("data-height"), element.getAttribute("data-model-scale"));
             element.querySelector(".thumbnail").style.display = "none";
             element.addEventListener("mousemove", duringRender);
         };
 
         const duringRender = (e) => {
-            renderItem(e, element.getAttribute("data-loaded-model-index"), toCanvasSize(element.getAttribute("data-width")), toCanvasSize(element.getAttribute("data-height")));
+            renderItem(e, element.getAttribute("data-loaded-model-index"), toCanvasSize(element.getAttribute("data-width")), toCanvasSize(element.getAttribute("data-height")), element.getAttribute("data-model-scale"));
         };
 
         const endRender = (e) => {
@@ -1945,7 +1948,7 @@
         pixelRatio: 2
     });
 
-    function startItemRender(event, modelIndex, width, height) {
+    function startItemRender(event, modelIndex, width, height, modelScale) {
         liveModel = modelList[modelIndex];
         const scale = 5;
         liveModel.scale.set(scale, scale, scale);
@@ -1969,7 +1972,7 @@
         event.srcElement.appendChild(liveRenderer.domElement);
     }
 
-    function renderItem(event, modelIndex, width, height) {
+    function renderItem(event, modelIndex, width, height, modelScale) {
         const rect = event.srcElement.getBoundingClientRect();
         const xPos = event.clientX - rect.left;
         const yPos = event.clientY - rect.top;
@@ -1979,7 +1982,7 @@
 
         modelGroup.rotation.y = toRadians((xPercent*15)-7.5);
         modelGroup.rotation.x = toRadians((yPercent*10)-5);
-        let scale = (((-xPercent+yPercent)*0.05)-0.05)+1;
+        let scale = ((((-xPercent+yPercent)*0.05)-0.05)+1);
         modelGroup.scale.set(scale, scale, scale);
         liveRenderer.render(liveScene, liveCamera);
     }
