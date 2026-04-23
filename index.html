@@ -324,6 +324,7 @@
                 </div>
             </div>
         </div>
+        <div class="trait"></div>
         <div class="actions">
             <div class="inspect"></div>
             <div class="equip"></div>
@@ -1158,6 +1159,9 @@
     .tooltip > .content h2 {
         font-size: 14px;
         margin: 8px 0px 4px;
+    }
+
+    .tooltip > .content h2:not(:first-child) {
         border-top: solid 1px #585858;
         padding-top: 10px;
     }
@@ -1440,7 +1444,8 @@
                     }
 
                     if(item["description"] != null) {
-                        newItem.appendChild(Object.assign(document.createElement('div'), { classList: "description", innerHTML: item["description"] }));
+                        newDescription = Object.assign(document.createElement('div'), { classList: "description", innerHTML: item["description"] });
+                        newItem.appendChild(newDescription);
                         if(item["required-shell"] != null) {
                             newItem.querySelector(".description").innerHTML += "<br><br>" + ("requires " + item["required-shell"] + " shell").toUpperCase();
                         }
@@ -1477,6 +1482,10 @@
                         subheading.innerHTML = item["required-shell"] + " shell"
                         newInventoryContent.appendChild(subheading);
                         currentSubsection = item["required-shell"];
+                    }
+
+                    if(item["trait"] == "unique") {
+                        newItem.setAttribute("data-trait", "unique");
                     }
                     newInventoryContent.appendChild(newItemSlot);
                 })
@@ -1674,6 +1683,7 @@
     document.addEventListener('mouseover', updateTooltip);  
 
     const tooltipStatTemplate = document.getElementById("tooltip-stat-template").cloneNode(true);
+    const uniqueTag = Object.assign(document.createElement('div'), { classList: "weapon-trait", innerHTML: "Unique" });
 
     function updateTooltip(e) {
         element = e.srcElement;
@@ -1731,6 +1741,12 @@
             });
 
             tooltipContent.appendChild(tooltipStatChanges);
+        }
+
+        const tooltipTrait = tooltipBox.querySelector('.trait');
+        tooltipTrait.innerHTML = ""
+        if(element.getAttribute("data-trait") == "unique") {
+            tooltipTrait.appendChild(uniqueTag.cloneNode(true));
         }
 
         const tooltipActions = tooltipBox.querySelector('.actions');

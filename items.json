@@ -4,6 +4,34 @@
         "items":
         [   
             {
+                "quality": "deluxe",
+                "name": "BR33 Victory Lap",
+                "inventory-size": {
+                    "x": 4,
+                    "y": 2
+                },
+                "trait": "unique",
+                "description": "A modified BR33 Volley Rifle optimized for performance under pressure.",
+                "item-type": "precision rifle",
+                "mod-slots": ["chip mod", "precision optic mod", "precision barrel mod", "precision magazine mod"],
+                "value": 50,
+                "model": "BR33-Volley-Rifle.glb"
+            },
+            {
+                "quality": "deluxe",
+                "name": "Misery Disciple",
+                "inventory-size": {
+                    "x": 4,
+                    "y": 2
+                },
+                "trait": "unique",
+                "description": "A modified Misriah 2442 shotgun optimized for close quarters combat.",
+                "item-type": "shotgun",
+                "mod-slots": ["chip mod", "shotgun grip mod", "underbarrel mod", "magazine mod"],
+                "value": 50,
+                "model": "Misriah 2442.glb"
+            },
+            {
                 "quality": "standard",
                 "name": "Impact H-AR",
                 "inventory-size": {
