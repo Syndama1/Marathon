@@ -324,7 +324,6 @@
                 </div>
             </div>
         </div>
-        <div class="trait"></div>
         <div class="actions">
             <div class="inspect"></div>
             <div class="equip"></div>
@@ -1031,6 +1030,7 @@
         pointer-events: none;
         box-shadow: 0px 0px 5px 5px #0a0a0a41;
         backdrop-filter: blur(20px);
+        overflow: hidden;
     }
 
     body:has(.item:hover, .stat:hover, .tree-node:hover) .tooltip {
@@ -1113,6 +1113,9 @@
 
     .tooltip .content > div:last-child {
         border-bottom: none;
+    }
+
+    .tooltip .content > div:last-child:not(.trait) {
         padding-bottom: 16px;
     }
 
@@ -1168,6 +1171,37 @@
 
     .tooltip > .content > .description {
         padding-top: 8px;
+    }
+
+    .tooltip .weapon-trait {
+        display: grid;
+    }
+
+    .tooltip .weapon-trait > * {
+        grid-area: 1 / 1;
+    }
+
+    .tooltip .weapon-trait .trait-background {
+        font-family: "Shapiro 55 Middle Wide";
+        width: 125%;
+        font-size: 18px;
+        line-height: 0.9;
+        color: #ffea10;
+        opacity: 0.1;
+        z-index: -1;
+        left: -5px;
+        position: absolute;
+        word-break: break-all;
+    }
+
+    .trait-title {
+        padding-top: 4px;
+        color: #ffea10;
+    }
+
+    .trait-description {
+        color: #a2a3a9;
+        padding-bottom: 4px;
     }
 
     .tooltip > .actions > .mouse-action {
@@ -1683,7 +1717,15 @@
     document.addEventListener('mouseover', updateTooltip);  
 
     const tooltipStatTemplate = document.getElementById("tooltip-stat-template").cloneNode(true);
-    const uniqueTag = Object.assign(document.createElement('div'), { classList: "weapon-trait", innerHTML: "Unique" });
+
+    const uniqueTag = Object.assign(document.createElement('div'), { classList: "weapon-trait" });
+    let content = document.createElement("div");
+    content.append(Object.assign(document.createElement('div'), { classList: "trait-title", innerHTML: "Unique" }));
+    content.append(Object.assign(document.createElement('div'), { classList: "trait-description", innerHTML: "This weapon uses unique upgrades; its mod slots are locked." }));
+    let textBackground = Object.assign(document.createElement('div'), { classList: "trait-background" });
+    textBackground.innerHTML = "UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE UNIQUE";
+    uniqueTag.appendChild(textBackground);
+    uniqueTag.appendChild(content);
 
     function updateTooltip(e) {
         element = e.srcElement;
@@ -1743,10 +1785,10 @@
             tooltipContent.appendChild(tooltipStatChanges);
         }
 
-        const tooltipTrait = tooltipBox.querySelector('.trait');
-        tooltipTrait.innerHTML = ""
+        let tooltipTrait = Object.assign(document.createElement("div"), { classList: "trait" });
         if(element.getAttribute("data-trait") == "unique") {
             tooltipTrait.appendChild(uniqueTag.cloneNode(true));
+            tooltipContent.appendChild(tooltipTrait);
         }
 
         const tooltipActions = tooltipBox.querySelector('.actions');
